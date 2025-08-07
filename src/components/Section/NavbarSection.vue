@@ -33,7 +33,7 @@ onMounted(() => {
 
 <template>
   <!-- ======== Navbar section ======== -->
-  <header class="navbar bg-primary">
+  <header class="navbar">
     <nav class="flex justify-between align-center gap-1 container">
       <!-- Mobile Menu Toggle Button -->
 
@@ -97,7 +97,7 @@ onMounted(() => {
   backdrop-filter: blur(50px);
   color: var(--white-color);
   box-shadow: var(--box-shadow);
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   padding: .5rem 0;

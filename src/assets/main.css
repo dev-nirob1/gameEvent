@@ -10,11 +10,11 @@ html {
   --montserrat-font: 'Montserrat', sans-serif;
   --roboto-font: 'Roboto', serif;
 
- --primary-color: #1e1e1e;       /* Black */
-  --alternative-color: #8B0000;     /* Dark Red (classic) */
-  --secondary-color: #D4AF37;
-  --white-color: #F8F4E9;
-  --border-color: #ccc;
+  --primary-color: #0f0f1a;
+  --secondary-color: #1e3a8a#3b82f6;
+  --alternative-color: ;
+  --white-color: #e0e7ff;
+  --border-color: #334155;
   /* ---------------typography------------ */
   /* headings  */
   --heading-1: 1.5rem;
@@ -168,7 +168,6 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-
 :root {
   --heading-1: 2rem;
   --heading-2: 1.75rem;
@@ -200,7 +199,6 @@ a {
     --heading-3: 2rem;
     --heading-4: 1.75rem;
   }
-
 }
 
 @media (min-width: 1200px) {
