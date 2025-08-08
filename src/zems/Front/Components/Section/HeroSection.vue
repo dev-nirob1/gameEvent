@@ -1,9 +1,7 @@
-
 <script setup>
 import BaseButton from '@/components/Elements/BaseButton.vue';
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import HeroTitle from '@/components/Elements/HeroTitle.vue';
-
 
 </script>
 
@@ -23,7 +21,6 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 </template>
 <style scoped>
 .hero {
-    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -43,7 +40,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
 /* buttons styles  */
 .hero .btn {
     color: var(--white-color);
-    border-radius: 2rem;
+    border-radius: .5rem;
     padding: .75rem 1rem;
 }
 
@@ -76,7 +73,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
     }
 
     .hero .btn {
-        padding: .8rem 2rem;
+        padding: 1rem 2rem;
     }
 }
 

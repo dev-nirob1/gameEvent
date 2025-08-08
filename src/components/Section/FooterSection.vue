@@ -1,5 +1,4 @@
-
-  <script setup>
+<script setup>
 import ListItem from '../Elements/ListItem.vue';
 import BaseParagraph from '../Elements/BaseParagraph.vue';
 import SubTitle from '../Elements/SubTitle.vue';
@@ -49,7 +48,7 @@ const currentYear = new Date().getFullYear();
         </ul>
       </div>
 
-   <div>
+      <div>
         <SubTitle>Stay Updated</SubTitle>
         <BaseParagraph>Subscribe to our newsletter for the latest news and event announcements.</BaseParagraph>
         <form class="subscribe-form">
@@ -95,9 +94,11 @@ const currentYear = new Date().getFullYear();
   margin-top: -.25rem;
   font-size: 0.9rem;
 }
+
 .logo img {
   height: auto;
-  width: 60px;;
+  width: 60px;
+  ;
 }
 
 
@@ -170,6 +171,7 @@ const currentYear = new Date().getFullYear();
 .footer .subscribe-form {
   display: flex;
 }
+
 .footer .subscribe-form input {
   flex: 1;
   padding: 0.8rem 1.2rem;
