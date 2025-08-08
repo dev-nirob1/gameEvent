@@ -17,7 +17,7 @@ defineProps({
       <BaseImage :image="event.image" alt="project image" />
     </div>
     <div class="p-1">
-      <SubTitle>{{ event.title }}</SubTitle>
+      <SubTitle>{{ event.name }}</SubTitle>
       <BaseParagraph>{{ event.description }}
       </BaseParagraph>
       <div class="flex gap-1">
@@ -31,11 +31,11 @@ defineProps({
 <style scoped>
 .event-card {
   border-radius: .75rem;
-  background-color: rgb(from var(--secondary-color)r g b / 10%);
+  background-color: rgb(from var(--secondary-color)r g b / 5%);
   box-shadow: var(--box-shadow);
 }
 .event-card p {
-  margin-top: .5rem;
+  margin: .5rem 0;
 }
 .event-card .image {
   position: relative;

@@ -59,6 +59,4 @@ const events = [
   color: var(--white-color);
   background-color: var(--primary-color);
 }
-
-
 </style>

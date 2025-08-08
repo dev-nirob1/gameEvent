@@ -10,9 +10,9 @@ html {
   --montserrat-font: 'Montserrat', sans-serif;
   --roboto-font: 'Roboto', serif;
 
-  --primary-color: #0f0f1a;
+  --primary-color: #0C0C1D ;
   --secondary-color:#3b82f6 ;
-  --alternative-color: #1e3a8a;
+  --alternative-color: #342E99;
   --white-color: #edf0f9;
   --border-color: #334155;
   /* ---------------typography------------ */
@@ -34,7 +34,8 @@ body {
   font-family: var(--montserrat-font);
   line-height: 1.6;
   font-size: 1rem;
-  background-color: #faf9f6;
+  color: var(--white-color);
+  background-color: #0C0C1D;
 }
 
 h1,
