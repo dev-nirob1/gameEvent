@@ -5,11 +5,13 @@ import EventSection from './zems/Front/Components/Section/EventSection.vue';
 import HeroSection from './zems/Front/Components/Section/HeroSection.vue';
 import HowItWorks from './zems/Front/Components/Section/HowToPlay.vue';
 import TestimonialSection from './zems/Front/Components/Section/TestimonialSection.vue';
+import VideoSection from './zems/Front/Components/Section/VideoSection.vue';
 </script>
 
 <template>
   <NavbarSection/>
   <HeroSection/>
+  <VideoSection/>
   <EventSection/>
   <HowItWorks/>
   <TestimonialSection/>
