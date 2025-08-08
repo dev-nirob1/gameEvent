@@ -51,13 +51,6 @@ import SubTitle from '@/components/Elements/SubTitle.vue';
   color: rgb(from var(--secondary-color) r g b /60%);
 }
 
-/*
-@media (min-width: 540px) {
-  .testimonial-card {
-    min-width: 400px;
-  }
-} */
-
 @media (min-width: 992px) {
 
   .testimonial-card {
