@@ -41,8 +41,8 @@ onMounted(() => {
       <a href="#" class="logo">
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
         <div>
-          <BaseTitle>RannaBari</BaseTitle>
-          <BaseParagraph>Every bite tells a story.</BaseParagraph>
+          <BaseTitle>LudoX</BaseTitle>
+          <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
         </div>
       </a>
       <BaseButton class="hamburger" @click="toggleMenu">
@@ -54,18 +54,19 @@ onMounted(() => {
           <a href="#">Home</a>
         </ListItem>
         <ListItem>
-          <a href="#menu">Menu</a>
+          <a href="#schedule">Schedule</a>
         </ListItem>
         <ListItem>
-          <a href="#our-story">Our Story</a>
+          <a href="#how-to-play">How to Play</a>
         </ListItem>
         <ListItem>
-          <a href="#reservation">Reservation</a>
+          <a href="#register">Register</a>
         </ListItem>
       </ul>
     </nav>
   </header>
 </template>
+
 
 <style scoped>
 /* background-color change on animation  */
