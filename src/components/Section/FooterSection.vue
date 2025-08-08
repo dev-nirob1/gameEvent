@@ -1,80 +1,75 @@
-<script setup>
+
+  <script setup>
 import ListItem from '../Elements/ListItem.vue';
 import BaseParagraph from '../Elements/BaseParagraph.vue';
 import SubTitle from '../Elements/SubTitle.vue';
 import BaseTitle from '../Elements/BaseTitle.vue';
+import InputField from '../Elements/InputField.vue';
+import BaseButton from '../Elements/BaseButton.vue';
 
 const currentYear = new Date().getFullYear();
-
 </script>
+
 <template>
   <footer class="footer">
     <div class="container medium-2 large-3 gap-2 py-3">
       <div>
         <a href="/" class="logo">
           <div>
-            <BaseTitle>Ranna Bari</BaseTitle>
-            <BaseParagraph>Every bite tells a story.</BaseParagraph>
+            <BaseTitle>LudoX</BaseTitle>
+            <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
           </div>
         </a>
-        <BaseParagraph>Savor authentic flavors and memorable dining experiences</BaseParagraph>
+        <BaseParagraph>
+          Join the ultimate Ludo gaming event and compete with players worldwide for epic rewards and glory!
+        </BaseParagraph>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+
       <div>
         <SubTitle>Quick Links</SubTitle>
         <ul class="footer-links">
           <ListItem>
-            <a href="#">Home</a>
+            <a href="#">Schedule</a>
           </ListItem>
           <ListItem>
-            <a href="#">Seasonal Menu</a>
+            <a href="#">How To Play</a>
           </ListItem>
           <ListItem>
-            <a href="#">Our Chefs</a>
+            <a href="#">Leaderboard</a>
           </ListItem>
           <ListItem>
-            <a href="#">Food Gallery</a>
-          </ListItem>
-          <ListItem>
-            <a href="#">Contact</a>
+            <a href="#">Register</a>
           </ListItem>
         </ul>
       </div>
 
-      <div>
-        <SubTitle>Visit Us</SubTitle>
-        <ul class="footer-links">
-          <ListItem>
-            <i class="fas fa-map-marker-alt"></i> 123 Gourmet Avenue, Foodie City
-          </ListItem>
-          <ListItem>
-            <i class="fas fa-phone"></i> +1 (555) 123-4567
-          </ListItem>
-          <ListItem>
-            <i class="fas fa-envelope"></i> reservations@rannabari.com
-          </ListItem>
-          <ListItem>
-            <i class="fas fa-clock"></i> Tue-Sun: 5:30 PM - 11:00 PM
-          </ListItem>
-        </ul>
+   <div>
+        <SubTitle>Stay Updated</SubTitle>
+        <BaseParagraph>Subscribe to our newsletter for the latest news and event announcements.</BaseParagraph>
+        <form class="subscribe-form">
+          <InputField type="email" placeholder="Your email address" required />
+          <BaseButton class="bg-secondary" type="submit">
+            <i class="fas fa-paper-plane text-white"></i>
+          </BaseButton>
+        </form>
       </div>
-
     </div>
 
-    <!-- Copyright & Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Ranna Bari. All rights reserved.</p>
+      <BaseParagraph>&copy; {{ currentYear }} LudoX. All rights reserved.</BaseParagraph>
       <div class="flex align-center justify-center gap-1">
-        <a href="#">Privacy Policy</a> <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a> <a href="#">Terms & Conditions</a>
       </div>
     </div>
   </footer>
 </template>
+
 
 <style scoped>
 .footer {
@@ -170,6 +165,27 @@ const currentYear = new Date().getFullYear();
 .footer ul a:hover {
   color: var(--secondary-color);
   padding-left: 5px;
+}
+
+.footer .subscribe-form {
+  display: flex;
+}
+.footer .subscribe-form input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: .5rem 0 0 .5rem;
+  font-size: 0.95rem;
+  background-color: var(--white-color);
+}
+
+.footer .subscribe-form .btn {
+  padding: 1rem 3rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 0 .5rem .5rem 0;
 }
 
 /* Footer copyright bar*/
