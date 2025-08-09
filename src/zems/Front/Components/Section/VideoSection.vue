@@ -61,6 +61,7 @@ const playVideo = () => {
 <style scoped>
 .video-info {
   padding: 3.75rem 0;
+  background: url('background.svg') center / cover no-repeat fixed;
 }
 
 .image {
@@ -102,6 +103,7 @@ const playVideo = () => {
 .content .btn {
   padding: .75rem 1rem;
   border-radius: .5rem;
+  border-color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
