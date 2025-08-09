@@ -3,8 +3,12 @@ import BaseButton from '@/components/Elements/BaseButton.vue';
 import BaseImage from '@/components/Elements/BaseImage.vue';
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import BaseTitle from '@/components/Elements/BaseTitle.vue';
+import { ref } from 'vue';
 
-
+const isVideoPlaying = ref(false)
+const playVideo = () => {
+  isVideoPlaying.value = true;
+}
 </script>
 
 <template>
@@ -12,24 +16,41 @@ import BaseTitle from '@/components/Elements/BaseTitle.vue';
     <div class="container">
       <div class="medium-2 gap-2">
         <div class="video relative">
-          <div class="image">
+          <div v-if="!isVideoPlaying" class="image">
             <BaseImage image="https://cdn.pixabay.com/photo/2023/09/18/10/02/dice-8260043_960_720.jpg" alt="image" />
-            <BaseButton class="play-icon">
-              <i class="fa-solid fa-play fa-3x"></i>
+            <BaseButton @click="playVideo" class="play-icon">
+              <i class="fa-solid fa-circle-play fa-5x"></i>
             </BaseButton>
           </div>
+          <div class="height-full width-full" v-else>
+            <iframe class="height-full width-full"
+              src="https://www.youtube.com/embed/fFTB7MP6Ba8?si=KqPheV1Ab721Umix&autoplay=1&mute=1"
+              title="YouTube video player" frameborder="3"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>
+
         <div class="content">
-          <BaseTitle>About Ludo Championship 2025</BaseTitle>
+          <BaseTitle>Battle for Glory!</BaseTitle>
+          <BaseTitle>Ludo Championship 2025</BaseTitle>
           <BaseParagraph>
-            The ultimate Ludo battle is here! Compete against the best players
-            worldwide, win exciting prizes, and prove your strategy skills.
+            The ultimate Ludo battle is here! Compete against the best players worldwide, win exciting prizes, and prove
+            your strategy skills.
           </BaseParagraph>
+
           <ul>
-            <li> $5000 Prize Pool</li>
-            <li> Live Match Streaming</li>
-            <li> Global Participation</li>
+            <li>
+              <i class="fa-solid fa-trophy"></i> $5000 Prize Pool
+            </li>
+            <li>
+              <i class="fa-solid fa-video"></i> Live Match Streaming
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i> Global Participation
+            </li>
           </ul>
+
           <BaseButton class="bg-secondary">Register Now</BaseButton>
         </div>
       </div>
@@ -45,27 +66,47 @@ import BaseTitle from '@/components/Elements/BaseTitle.vue';
 .image {
   width: 100%;
   height: auto;
+  border: 3px solid var(--secondary-color);
 }
 
 .image img {
   height: 100%;
   width: 100%;
+  display: block;
   object-fit: cover;
 }
 
 .play-icon {
+  color: var(--secondary-color);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--white-color);
-  background: rgb(from var(--secondary-color)r g b / 70%);
-  border-color: rgb(from var(--secondary-color)r g b / 45%);
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.content ul {
+  list-style: none;
+  padding-left: .25rem;
+}
+
+.content ul li {
+  margin: .5rem 0;
+}
+
+.content ul li i {
+  color: var(--secondary-color);
+  margin-right: .25rem;
+}
+
+.content .btn {
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+}
+
+@media (min-width: 768px) {
+  .content .btn {
+    padding: 1rem 2rem;
+  }
 }
 </style>
