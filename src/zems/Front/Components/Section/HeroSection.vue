@@ -13,7 +13,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
                Roll the dice, challenge skilled players, and rise to the top in the biggest Ludo battle of the year! Win amazing rewards, earn bragging rights, and become a true Ludo Legend.
             </BaseParagraph>
             <div class="flex justify-center gap-1">
-                <BaseButton class="bg-alternative">Join the Battle</BaseButton>
+                <BaseButton class="bg-secondary">Join the Battle</BaseButton>
                 <BaseButton class="outline">View Leaderboard</BaseButton>
             </div>
         </div>
@@ -56,15 +56,14 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
     color: var(--secondary-color);
 }
 
-.hero .btn.bg-alternative {
-    border-color: var(--alternative-color);
+.hero .btn.bg-secondary {
+    border-color: var(--secondary-color);
 }
 
-.hero .btn.bg-alternative:hover {
+.hero .btn.btn.bg-secondary:hover {
     transform: translateY(-.25rem);
-    color: var(--primary-color);
-    border-color: var(--secondary-color);
-    background-color: var(--secondary-color);
+    border-color: var(--alternative-color);
+    background-color: var(--alternative-color);
 }
 
 @media (min-width: 768px) {
