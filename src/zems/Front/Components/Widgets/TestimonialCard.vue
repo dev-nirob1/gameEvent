@@ -1,4 +1,9 @@
 <script setup>
+defineProps({
+  review: {
+    typeof: Object
+  }
+})
 import BaseImage from '@/components/Elements/BaseImage.vue';
 import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
 import SubTitle from '@/components/Elements/SubTitle.vue';
@@ -11,16 +16,17 @@ import SubTitle from '@/components/Elements/SubTitle.vue';
     <i class="bg-graphic fa-solid fa-quote-right fa-10x"></i>
 
     <div class="flex align-center gap-1">
-      <BaseImage class="height-full width-full" image="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="review.description" />
+      <BaseImage class="height-full width-full"
+        :image="review.image"
+        alt="review.description" />
       <div>
-        <SubTitle>Name</SubTitle>
-        <span>manager</span>
+        <SubTitle>{{review.name}}</SubTitle>
+        <span>{{review.role}}</span>
       </div>
     </div>
     <div class="flex">
       <BaseParagraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime maiores totam suscipit perspiciatis doloremque
-        ipsam?
+       {{review.review}}
       </BaseParagraph>
     </div>
   </div>
@@ -39,6 +45,7 @@ import SubTitle from '@/components/Elements/SubTitle.vue';
 }
 
 .testimonial-card img {
+  border-radius: .5rem;
   height: 4rem;
   width: 4rem;
   object-fit: cover;

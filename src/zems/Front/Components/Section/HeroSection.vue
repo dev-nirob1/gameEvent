@@ -27,7 +27,7 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue';
     justify-content: center;
     text-align: center;
     color: var(--white-color);
-    background: linear-gradient(to bottom, rgb(from var(--primary-color) r g b / 60%), rgb(from var(--primary-color) r g b / 50%)), url('https://cdn.pixabay.com/photo/2018/10/03/08/55/man-3720750_1280.jpg') center / cover no-repeat;
+    background: linear-gradient(to bottom, rgb(from var(--primary-color) r g b / 70%), rgb(from var(--primary-color) r g b / 70%)), url('https://cdn.pixabay.com/photo/2018/10/03/08/55/man-3720750_1280.jpg') center / cover no-repeat;
 }
 .hero .highlight{
   color: var(--secondary-color)

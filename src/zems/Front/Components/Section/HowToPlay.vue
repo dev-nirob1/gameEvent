@@ -1,3 +1,3 @@
 <template>
-  how it works
+  timeline section
 </template>
