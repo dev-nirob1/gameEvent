@@ -1,5 +1,4 @@
 <script setup>
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
 import EventCard from '../Widgets/EventCard.vue';
 
 const events = [

@@ -1,8 +1,4 @@
 <script setup>
-import BaseButton from '@/components/Elements/BaseButton.vue';
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
 import { ref } from 'vue';
 
 const isVideoPlaying = ref(false)

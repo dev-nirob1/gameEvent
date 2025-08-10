@@ -4,10 +4,6 @@ defineProps({
     typeof: Object
   }
 })
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
-
 </script>
 
 

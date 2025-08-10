@@ -1,8 +1,6 @@
 <script setup>
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
-import TestimonialCard from '../Widgets/TestimonialCard.vue';
-import BaseButton from '@/components/Elements/BaseButton.vue';
 import { computed, ref } from 'vue';
+import TestimonialCard from '../Widgets/TestimonialCard.vue';
 
 const testimonials = ref([
   {

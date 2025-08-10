@@ -1,10 +1,5 @@
 <script setup>
-import ListItem from '../Elements/ListItem.vue';
-import BaseParagraph from '../Elements/BaseParagraph.vue';
-import SubTitle from '../Elements/SubTitle.vue';
-import BaseTitle from '../Elements/BaseTitle.vue';
-import InputField from '../Elements/InputField.vue';
-import BaseButton from '../Elements/BaseButton.vue';
+import { RouterLink } from 'vue-router';
 
 const currentYear = new Date().getFullYear();
 </script>
@@ -13,20 +8,20 @@ const currentYear = new Date().getFullYear();
   <footer class="footer">
     <div class="container medium-2 large-3 gap-2 py-3">
       <div>
-        <a href="/" class="logo">
+        <RouterLink to="/" class="logo">
           <div>
             <BaseTitle>LudoX</BaseTitle>
             <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
           </div>
-        </a>
+        </RouterLink>
         <BaseParagraph>
           Join the ultimate Ludo gaming event and compete with players worldwide for epic rewards and glory!
         </BaseParagraph>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <RouterLink to=""><i class="fab fa-facebook-f"></i></RouterLink>
+          <RouterLink to=""><i class="fab fa-twitter"></i></RouterLink>
+          <RouterLink to=""><i class="fab fa-instagram"></i></RouterLink>
+          <RouterLink to=""><i class="fab fa-youtube"></i></RouterLink>
         </div>
       </div>
 
@@ -34,16 +29,16 @@ const currentYear = new Date().getFullYear();
         <SubTitle>Quick Links</SubTitle>
         <ul class="footer-links">
           <ListItem>
-            <a href="#">Schedule</a>
+            <RouterLink to="">Schedule</RouterLink>
           </ListItem>
           <ListItem>
-            <a href="#">How To Play</a>
+            <RouterLink to="">How To Play</RouterLink>
           </ListItem>
           <ListItem>
-            <a href="#">Leaderboard</a>
+            <RouterLink to="">Leaderboard</RouterLink>
           </ListItem>
           <ListItem>
-            <a href="#">Register</a>
+            <RouterLink to="">Register</RouterLink>
           </ListItem>
         </ul>
       </div>

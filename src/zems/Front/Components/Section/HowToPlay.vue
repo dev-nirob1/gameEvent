@@ -1,8 +1,4 @@
 <script setup>
-import BaseImage from '@/components/Elements/BaseImage.vue';
-import BaseParagraph from '@/components/Elements/BaseParagraph.vue';
-import BaseTitle from '@/components/Elements/BaseTitle.vue';
-import SubTitle from '@/components/Elements/SubTitle.vue';
 import { ref } from 'vue';
 const steps = ref([
   {
