@@ -20,7 +20,7 @@ export default [
         },
         {
           path: "/contact-us",
-          name: "/contact-us",
+          name: "contact-us",
           component: ContactPage
         },
     ]

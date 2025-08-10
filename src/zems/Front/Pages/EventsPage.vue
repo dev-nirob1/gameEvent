@@ -5,4 +5,5 @@ import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
 
 <template>
   <BreadCrumb/>
+  
 </template>

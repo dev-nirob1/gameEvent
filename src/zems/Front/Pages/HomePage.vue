@@ -1,5 +1,6 @@
 <script setup>
 import EventSection from '../Components/Section/EventSection.vue';
+import FaqSection from '../Components/Section/FaqSection.vue';
 import HeroSection from '../Components/Section/HeroSection.vue';
 import HowToPlay from '../Components/Section/HowToPlay.vue';
 import TestimonialSection from '../Components/Section/TestimonialSection.vue';
@@ -12,5 +13,6 @@ import VideoSection from '../Components/Section/VideoSection.vue';
   <VideoSection/>
   <EventSection/>
   <HowToPlay/>
+  <FaqSection/>
   <TestimonialSection/>
 </template>
