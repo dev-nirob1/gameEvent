@@ -38,29 +38,26 @@ onMounted(() => {
       <!-- Mobile Menu Toggle Button -->
 
       <!-- Logo -->
-      <a href="#" class="logo">
+      <RouterLink to="/" class="logo">
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
         <div>
           <BaseTitle>LudoX</BaseTitle>
           <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
         </div>
-      </a>
+      </RouterLink>
       <BaseButton class="hamburger" @click="toggleMenu">
         <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
       </BaseButton>
       <!-- Navigation Links -->
       <ul class="nav-links" :class="{ 'active': isMenuOpen }">
         <ListItem>
-          <a href="#">Home</a>
+          <RouterLink to="/">Home</RouterLink>
         </ListItem>
         <ListItem>
-          <a href="#schedule">Schedule</a>
+          <RouterLink to="/events">Events</RouterLink>
         </ListItem>
         <ListItem>
-          <a href="#how-to-play">How to Play</a>
-        </ListItem>
-        <ListItem>
-          <a href="#register">Register</a>
+          <RouterLink to="/contact-us">Contact Us</RouterLink>
         </ListItem>
       </ul>
     </nav>
