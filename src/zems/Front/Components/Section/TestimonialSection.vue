@@ -66,7 +66,7 @@ const activeReview = computed(() => {
 <style scoped>
 .testimonials {
   padding: 3.75rem 0;
-  background: url('/background.svg') center / cover no-repeat;
+  background: url('/background.svg') center / cover no-repeat fixed;
 }
 
 .testimonials .btn {
