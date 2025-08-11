@@ -33,7 +33,7 @@ defineProps({
   padding: 1rem;
   font-weight: 500;
   color: var(--white-color);
-  background-color: var(--secondary-color);
+  background-color: rgb(from var(--secondary-color)r g b / 40%);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ defineProps({
   max-height: 0;
   overflow: hidden;
   /* background-color: var(--white-color); */
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .accordion-body.active {
   padding: 1rem;

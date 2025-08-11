@@ -44,13 +44,15 @@ const toggleAccordion = (id) => {
     <div class="container">
       <div class="medium-2 gap-2">
         <div>
-          <BaseTitle>Frequently</BaseTitle>
-          <BaseTitle>Asked Question</BaseTitle>
-          <BaseParagraph>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quam incidunt ut eos
-            similique soluta ullam consequatur. Et labore beatae repellat? Alias optio dolorum quidem quis fuga illo
-            doloribus excepturi?</BaseParagraph>
+          <BaseTitle>Got Questions?</BaseTitle>
+        <BaseTitle>We Have Answers!</BaseTitle>
+        <BaseParagraph>
+          Everything you need to know about the upcoming Ludo championship!
+          Learn about tournament rules, registration deadlines, prize pool
+          distribution, team requirements, and competition format. Let the
+          dice roll and may the best strategist win!
+        </BaseParagraph>
         </div>
-
         <div>
           <AccordionFaq v-for="(faq, i) in faqs" :key="i" :currentOpenItem="currentOpenItem" :accordionData="faq"
             :toggleAccordion="toggleAccordion" />
