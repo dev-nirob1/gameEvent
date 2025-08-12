@@ -2,6 +2,7 @@ import FrontLayout from "./Layout/FrontLayout.vue";
 import ContactPage from "./Pages/ContactPage.vue";
 import EventsPage from "./Pages/EventsPage.vue";
 import HomePage from "./Pages/HomePage.vue";
+import LeaderBoard from "./Pages/LeaderBoard.vue";
 
 export default [
   {
@@ -22,6 +23,11 @@ export default [
           path: "/contact-us",
           name: "contact-us",
           component: ContactPage
+        },
+        {
+          path: "/leaderboard",
+          name: "leaderboard",
+          component: LeaderBoard
         },
     ]
   }

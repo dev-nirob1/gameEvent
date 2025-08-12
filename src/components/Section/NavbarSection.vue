@@ -59,6 +59,9 @@ onMounted(() => {
         <ListItem>
           <RouterLink to="/contact-us">Contact Us</RouterLink>
         </ListItem>
+        <ListItem>
+          <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+        </ListItem>
       </ul>
     </nav>
   </header>
