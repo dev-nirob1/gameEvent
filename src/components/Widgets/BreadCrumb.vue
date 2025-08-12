@@ -19,7 +19,7 @@ console.log(route);
 .breadcrumb {
   padding: 8rem 0 3rem 0;
   /* background: rgb(from var(--primary-color)r g b / 5%); */
-  background: url('/background.svg') center / cover no-repeat
+  /* background: url('/background.svg') center / cover no-repeat */
 }
 
 .breadcrumb ul {
