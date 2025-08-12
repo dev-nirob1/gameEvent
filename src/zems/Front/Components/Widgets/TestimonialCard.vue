@@ -37,7 +37,7 @@ defineProps({
   padding: 2rem 1.5rem;
   background: rgb(from var(--secondary-color)r g b / 5%);
   box-shadow: var(--box-shadow);
-  scroll-snap-align: start;
+  z-index: 1;
 }
 
 .testimonial-card img {
@@ -52,6 +52,7 @@ defineProps({
   right: 1rem;
   top: -4rem;
   color: rgb(from var(--secondary-color) r g b /60%);
+  z-index: 0;
 }
 
 @media (min-width: 992px) {

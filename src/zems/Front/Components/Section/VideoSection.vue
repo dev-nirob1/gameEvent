@@ -11,7 +11,7 @@ const playVideo = () => {
   <section class="video-info">
     <div class="container">
       <div class="medium-2 gap-2">
-        <div class="video relative">
+        <div class="video relative order-2 medium-order-1">
           <div v-if="!isVideoPlaying" class="image">
             <BaseImage image="https://cdn.pixabay.com/photo/2023/09/18/10/02/dice-8260043_960_720.jpg" alt="image" />
             <BaseButton @click="playVideo" class="play-icon">
@@ -27,7 +27,7 @@ const playVideo = () => {
           </div>
         </div>
 
-        <div class="content">
+        <div class="content order-1 medium-order-2">
           <BaseTitle>Battle for Glory!</BaseTitle>
           <BaseTitle>Ludo Championship 2025</BaseTitle>
           <BaseParagraph>
@@ -100,11 +100,14 @@ const playVideo = () => {
   padding: .75rem 1rem;
   border-radius: .5rem;
   border-color: var(--secondary-color);
+  color: var(--white-color);
+  width: fit-content;
 }
 
 @media (min-width: 768px) {
   .content .btn {
     padding: 1rem 2rem;
+    width: fit-content;
   }
 }
 </style>
