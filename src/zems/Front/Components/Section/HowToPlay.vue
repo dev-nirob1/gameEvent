@@ -27,12 +27,12 @@ const steps = ref([
   <section class="how-to-play">
     <div class="container">
       <BaseTitle class="text-center mb-5">How To Play</BaseTitle>
-      <div class="medium-3 gap-2 relative">
+      <div class="medium-3 gap-2 pl-2 relative">
 
         <div v-for="(step, i) in steps" :key="step.id" class="timeline-card">
           <span class="number">{{ i }}</span>
           <BaseImage :image="step.icon" />
-          <SubTitle class="mt-1">{{step.title}}</SubTitle>
+          <SubTitle class="mt-1">{{ step.title }}</SubTitle>
           <BaseParagraph>{{ step.description }}</BaseParagraph>
         </div>
 
@@ -55,27 +55,27 @@ const steps = ref([
 }
 
 .how-to-play .timeline-card::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: -2rem;
-  left: 0;
-  height: 3px;
-  width: 100%;
+  left: -1.5rem;
+  top: 0;
+  height: 100%;
+  width: 3px;
   background: var(--secondary-color);
   z-index: 1;
 }
 
 .how-to-play .timeline-card:not(:last-child)::before {
-  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
 }
 
 .how-to-play .number {
   position: absolute;
-  top: -3.5rem;
-  left: 50%;
+  top: 50%;
+  left: -1.5rem;
   transform: translate(-50%);
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
   background: var(--secondary-color);
   display: flex;
@@ -89,5 +89,24 @@ const steps = ref([
 .how-to-play .timeline-card img {
   width: 80px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .how-to-play .timeline-card::before {
+    top: -2rem;
+    left: 0;
+    height: 3px;
+    width: 100%;
+  }
+
+  .how-to-play .timeline-card:not(:last-child)::before {
+    width: calc(100% + 2rem);
+    height: 3px;
+  }
+
+  .how-to-play .number {
+    top: -3.25rem;
+    left: 50%;
+  }
 }
 </style>
