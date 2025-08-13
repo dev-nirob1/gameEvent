@@ -41,7 +41,7 @@ onMounted(() => {
       <RouterLink to="/" class="logo">
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
         <div>
-          <BaseTitle>LudoX</BaseTitle>
+          <BaseTitle>LudoClash</BaseTitle>
           <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
         </div>
       </RouterLink>

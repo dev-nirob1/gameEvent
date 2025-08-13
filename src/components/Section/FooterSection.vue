@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear();
       <div>
         <RouterLink to="/" class="logo">
           <div>
-            <BaseTitle>LudoX</BaseTitle>
+            <BaseTitle>LudoClash</BaseTitle>
             <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
           </div>
         </RouterLink>
