@@ -29,7 +29,7 @@ export default defineConfig({
         icons: [
           {
             src: '/mobile-logo-1.png',
-            sizes: '192x192',
+            sizes: '144x144',
             type: 'image/png',
             purpose: 'any'
           },

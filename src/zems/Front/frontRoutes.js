@@ -1,5 +1,6 @@
 import FrontLayout from "./Layout/FrontLayout.vue";
 import ContactPage from "./Pages/ContactPage.vue";
+import EventDetails from "./Pages/EventDetails.vue";
 import EventsPage from "./Pages/EventsPage.vue";
 import HomePage from "./Pages/HomePage.vue";
 import LeaderBoard from "./Pages/LeaderBoard.vue";
@@ -18,6 +19,11 @@ export default [
           path: "/events",
           name: "events",
           component: EventsPage
+        },
+        {
+          path: "/events-details/:slug",
+          name: "events-details",
+          component: EventDetails
         },
         {
           path: "/contact-us",
