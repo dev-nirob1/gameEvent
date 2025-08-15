@@ -16,6 +16,6 @@ import { RouterView } from 'vue-router';
 </template>
 <style scoped>
 main{
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 </style>
