@@ -1,25 +1,41 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
-console.log(route);
+const router = useRouter()
+
+const goBack = () => {
+  router.back()
+}
 </script>
 
 <template>
-  <section class="breadcrumb">
-    <ul class="container">
-      <ListItem><RouterLink to="/">Home</RouterLink></ListItem>
-      <ListItem>{{ route.name }}</ListItem>
-      <ListItem v-if="route.params.slug">{{ route.params.slug }}</ListItem>
-    </ul>
+  <section>
+    <!-- Mobile Back Bar -->
+    <div class="mobile-backbar">
+      <button @click="goBack" aria-label="Go Back">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <span class="page-title">
+        {{ route.meta?.title || route.name }}
+      </span>
+    </div>
+
+    <!-- Desktop Breadcrumb -->
+    <div class="breadcrumb">
+      <ul class="container">
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li>{{ route.name }}</li>
+        <li v-if="route.params.slug">{{ route.params.slug }}</li>
+      </ul>
+    </div>
   </section>
 </template>
 
 <style scoped>
+/* ===== Breadcrumb (Desktop) ===== */
 .breadcrumb {
   padding: 8rem 0 3rem 0;
-  /* background: rgb(from var(--primary-color)r g b / 5%); */
-  /* background: url('/background.svg') center / cover no-repeat */
 }
 
 .breadcrumb ul {
@@ -29,7 +45,6 @@ console.log(route);
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0;
 }
 
 .breadcrumb ul li a {
@@ -60,9 +75,53 @@ console.log(route);
   padding-left: 1rem;
 }
 
+/* ===== Mobile Back Bar ===== */
+.mobile-backbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobile-backbar button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile-backbar .page-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Responsive Switch ===== */
 @media (min-width: 768px) {
-  .breadcrumb ul {
-    font-size: 1.25rem;
+  .mobile-backbar {
+    display: none;
+  }
+  .breadcrumb {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    display: none;
+  }
+  .mobile-backbar {
+    display: flex;
   }
 }
 </style>
