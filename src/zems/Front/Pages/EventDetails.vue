@@ -36,82 +36,136 @@ const event = {
   <BreadCrumb />
   <section class="event-details">
     <div class="container">
-      <div>
-        <BaseTitle>About Event</BaseTitle>
-        <BaseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis nihil sint! Modi ex
-          doloribus earum consectetur id possimus repellendus incidunt culpa magni doloremque sint et, delectus,
-          dignissimos dicta deleniti asperiores sed commodi mollitia sunt tempore ad ut maiores? Sed enim et velit ullam
-          quaerat veritatis itaque, facilis pariatur necessitatibus.</BaseParagraph>
 
-        <ul class="small-2 larger-4 gap-2 statistics">
-          <!-- individual stats component  -->
-          <ListItem>
-            <i class="fa-solid fa-tag fa-3x"></i>
-            <div>
-              <BaseTitle>560+</BaseTitle>
-              <BaseParagraph>Entry Fee</BaseParagraph>
-            </div>
-          </ListItem>
-          <ListItem>
-            <i class="fa-solid fa-users fa-3x"></i>
-            <div>
-              <BaseTitle>197K+</BaseTitle>
-              <BaseParagraph>Price Pool</BaseParagraph>
-            </div>
-          </ListItem>
-          <ListItem>
-            <i class="fa-solid fa-store fa-3x"></i>
-            <div>
-              <BaseTitle>268+</BaseTitle>
-              <BaseParagraph>Partner Stores</BaseParagraph>
-            </div>
-          </ListItem>
-          <ListItem>
-            <i class="fa-solid fa-percent fa-3x"></i>
-            <div>
-              <BaseTitle>340+</BaseTitle>
-              <BaseParagraph>Exclusive Deals</BaseParagraph>
-            </div>
-          </ListItem>
+      <!-- About Event -->
+      <BaseTitle>About Event</BaseTitle>
+      <BaseParagraph>
+        Join the ultimate Ludo showdown and compete with players worldwide for exciting prizes and glory! Show your
+        skills, beat the competition, and take home the crown.
+      </BaseParagraph>
+
+      <!-- Statistics -->
+      <ul class="small-2 larger-4 gap-2 statistics">
+        <ListItem>
+          <i class="fa-solid fa-tag fa-3x"></i>
+          <div>
+            <BaseTitle>$5</BaseTitle>
+            <BaseParagraph>Entry Fee</BaseParagraph>
+          </div>
+        </ListItem>
+        <ListItem>
+          <i class="fa-solid fa-trophy fa-3x"></i>
+          <div>
+            <BaseTitle>$500</BaseTitle>
+            <BaseParagraph>Prize Pool</BaseParagraph>
+          </div>
+        </ListItem>
+        <ListItem>
+          <i class="fa-solid fa-percent fa-3x"></i>
+          <div>
+            <BaseTitle>10%</BaseTitle>
+            <BaseParagraph>Platform Cut</BaseParagraph>
+          </div>
+        </ListItem>
+        <ListItem>
+          <i class="fa-solid fa-gamepad fa-3x"></i>
+          <div>
+            <BaseTitle>Online</BaseTitle>
+            <BaseParagraph>Mode</BaseParagraph>
+          </div>
+        </ListItem>
+      </ul>
+
+      <!-- Rules -->
+      <div class="rules mt-2">
+        <BaseTitle>Rules & Regulations</BaseTitle>
+        <ul>
+          <ListItem>Use the official Ludo app for gameplay.</ListItem>
+          <ListItem>Screen recording must be enabled during matches.</ListItem>
+          <ListItem>Stable internet connection is mandatory; repeated disconnects may cause forfeits.</ListItem>
+          <ListItem>Usernames must match your registered ID.</ListItem>
+          <ListItem>Bug exploitation, macro tools, or hacks result in instant disqualification.</ListItem>
+          <ListItem>Referee decisions are final and binding.</ListItem>
+          <ListItem>Be ready 10 minutes before match time; late join may be disqualified.</ListItem>
         </ul>
+      </div>
 
-        <div class="rules mt-2">
-          <BaseTitle>Rules & Regulations</BaseTitle>
+      <div class="medium-2 gap-2">
+        <!-- Event Schedule -->
+        <div class="schedule mt-2">
+          <BaseTitle>Event Schedule</BaseTitle>
           <ul>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+            <ListItem>Registration: Aug 20 – Aug 25</ListItem>
+            <ListItem>Preliminary Rounds: Aug 26 – Aug 28</ListItem>
+            <ListItem>Final Match: Aug 30, 8 PM</ListItem>
           </ul>
         </div>
+
+        <!-- Eligibility -->
+        <div class="eligibility mt-2">
+          <BaseTitle>Eligibility</BaseTitle>
+          <ul>
+            <ListItem>Participants must be 18+ years old.</ListItem>
+            <ListItem>Must have a smartphone compatible with the official Ludo app.</ListItem>
+            <ListItem>Open worldwide unless restricted by local laws.</ListItem>
+          </ul>
+        </div>
+      </div>
+
+      <div class="medium-2 gap-2">
+        <!-- If You Win -->
+        <div class="winning-process mt-2">
+          <BaseTitle>If You Win</BaseTitle>
+          <ul>
+            <ListItem>Our team verifies your match and recording.</ListItem>
+            <ListItem>You will receive a win confirmation within 24 hours.</ListItem>
+            <ListItem>Claim your prize via your player dashboard.</ListItem>
+            <ListItem>Payout is made after the platform cut.</ListItem>
+          </ul>
+        </div>
+
+        <!-- Fees & Commission -->
+        <div class="fees mt-2">
+          <BaseTitle>Fees & Commission</BaseTitle>
+          <BaseParagraph>
+            Joining Fee: $5 • Platform Cut: 10%
+          </BaseParagraph>
+          <BaseParagraph>
+            Example: Win $100 → You receive $90
+          </BaseParagraph>
+        </div>
+
+      </div>
+      <div class="medium-2 gap-2">
+        <!-- Withdrawal Process -->
         <div class="withdrawal-process mt-2">
           <BaseTitle>Withdrawal Process</BaseTitle>
           <ul>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet, consectetur adipisicing.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet.</ListItem>
-            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit.</ListItem>
+            <ListItem>Minimum withdrawal amount: $5</ListItem>
+            <ListItem>Processing time: 3-5 business days</ListItem>
+            <ListItem>Methods: Bkash / Nagad / Bank / UPI (verified accounts only)</ListItem>
+            <ListItem>Dispute window: 24 hours after payout</ListItem>
           </ul>
         </div>
-        <div class="fees mt-2">
-  <BaseTitle>Fees & Commission</BaseTitle>
-  <BaseParagraph>
-    Joining Fee:  • Platform Cut: 10%
-  </BaseParagraph>
-  <BaseParagraph>
-    Example: Win $100 → You receive $60
-  </BaseParagraph>
-</div>
+
+        <!-- Contact / Support -->
+        <div class="contact-support mt-2">
+          <BaseTitle>Contact / Support</BaseTitle>
+          <BaseParagraph>Email: support@ludoevent.com</BaseParagraph>
+          <BaseParagraph>Live Chat: Available on player dashboard</BaseParagraph>
+        </div>
       </div>
+
     </div>
   </section>
 </template>
 
 
+
 <style scoped>
 .event-details {
   padding: 3.75rem 0;
+  background: rgb(from var(--secondary-color) r g b / 5%);
 }
 
 .event-details .statistics {
