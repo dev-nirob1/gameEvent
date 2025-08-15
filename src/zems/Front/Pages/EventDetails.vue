@@ -33,23 +33,104 @@ const event = {
 
 
 <template>
-<BreadCrumb/>
-<section class="event-details">
- <div class="container">
-   <div>
-    <BaseTitle>About Event</BaseTitle>
-    <BaseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis nihil sint! Modi ex doloribus earum consectetur id possimus repellendus incidunt culpa magni doloremque sint et, delectus, dignissimos dicta deleniti asperiores sed commodi mollitia sunt tempore ad ut maiores? Sed enim et velit ullam quaerat veritatis itaque, facilis pariatur necessitatibus.</BaseParagraph>
-    <div class="statistics">
-      statistics
+  <BreadCrumb />
+  <section class="event-details">
+    <div class="container">
+      <div>
+        <BaseTitle>About Event</BaseTitle>
+        <BaseParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis nihil sint! Modi ex
+          doloribus earum consectetur id possimus repellendus incidunt culpa magni doloremque sint et, delectus,
+          dignissimos dicta deleniti asperiores sed commodi mollitia sunt tempore ad ut maiores? Sed enim et velit ullam
+          quaerat veritatis itaque, facilis pariatur necessitatibus.</BaseParagraph>
+
+        <ul class="small-2 larger-4 gap-2 statistics">
+          <!-- individual stats component  -->
+          <ListItem>
+            <i class="fa-solid fa-tag fa-3x"></i>
+            <div>
+              <BaseTitle>560+</BaseTitle>
+              <BaseParagraph>Entry Fee</BaseParagraph>
+            </div>
+          </ListItem>
+          <ListItem>
+            <i class="fa-solid fa-users fa-3x"></i>
+            <div>
+              <BaseTitle>197K+</BaseTitle>
+              <BaseParagraph>Price Pool</BaseParagraph>
+            </div>
+          </ListItem>
+          <ListItem>
+            <i class="fa-solid fa-store fa-3x"></i>
+            <div>
+              <BaseTitle>268+</BaseTitle>
+              <BaseParagraph>Partner Stores</BaseParagraph>
+            </div>
+          </ListItem>
+          <ListItem>
+            <i class="fa-solid fa-percent fa-3x"></i>
+            <div>
+              <BaseTitle>340+</BaseTitle>
+              <BaseParagraph>Exclusive Deals</BaseParagraph>
+            </div>
+          </ListItem>
+        </ul>
+
+        <div class="rules mt-2">
+          <BaseTitle>Rules & Regulations</BaseTitle>
+          <ul>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing.</ListItem>
+          </ul>
+        </div>
+        <div class="withdrawal-process mt-2">
+          <BaseTitle>Withdrawal Process</BaseTitle>
+          <ul>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet, consectetur adipisicing.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet.</ListItem>
+            <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit.</ListItem>
+          </ul>
+        </div>
+        <div class="fees mt-2">
+  <BaseTitle>Fees & Commission</BaseTitle>
+  <BaseParagraph>
+    Joining Fee:  • Platform Cut: 10%
+  </BaseParagraph>
+  <BaseParagraph>
+    Example: Win $100 → You receive $60
+  </BaseParagraph>
+</div>
+      </div>
     </div>
-  </div>
- </div>
-</section>
+  </section>
 </template>
 
 
 <style scoped>
-.event-details{
+.event-details {
   padding: 3.75rem 0;
+}
+
+.event-details .statistics {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.event-details .statistics li {
+  background: rgb(from var(--secondary-color)r g b / 15%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  border-radius: .75rem;
+}
+
+.event-details .statistics li p {
+  margin: 0;
 }
 </style>
