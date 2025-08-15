@@ -1,4 +1,7 @@
 <script setup>
+import BaseButton from '@/components/Elements/BaseButton.vue';
+import { RouterLink } from 'vue-router';
+
 defineProps({
   event: {
     type: Object
@@ -12,11 +15,18 @@ defineProps({
       <BaseImage :image="event.image" alt="project image" />
     </div>
     <div class="p-1">
+      <BaseParagraph class="price-badge">Fee: 5$</BaseParagraph>
+      <div class="flex justify-between">
+        <BaseParagraph>Starts: 15-aug 2025</BaseParagraph>
+        <BaseParagraph>Prize: <strong>60</strong>$</BaseParagraph>
+      </div>
       <SubTitle>{{ event.name }}</SubTitle>
-      <BaseParagraph>{{ event.description }}
+      <BaseParagraph>{{ event.description.substring(0, 70) }}...
       </BaseParagraph>
       <div class="flex gap-1">
-        <BaseButton class="bg-secondary">Details</BaseButton>
+        <BaseButton class="bg-secondary">
+          <RouterLink to="/events-details/hello">Details</RouterLink>
+        </BaseButton>
         <BaseButton class="outline">Entry</BaseButton>
       </div>
     </div>
@@ -28,10 +38,28 @@ defineProps({
   border-radius: .75rem;
   background-color: rgb(from var(--secondary-color)r g b / 5%);
   box-shadow: var(--box-shadow);
+  position: relative;
 }
+
+.price-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 !important;
+  padding: .5rem 1rem;
+  background: rgb(from var(--secondary-color)r g b / 90%);
+  border-top-left-radius: .75rem;
+  font-weight: 600;
+}
+
+.event-card a {
+  text-decoration: none;
+}
+
 .event-card p {
   margin: .5rem 0;
 }
+
 .event-card .image {
   position: relative;
   overflow: hidden;
@@ -39,6 +67,7 @@ defineProps({
   width: auto;
   border-radius: .75rem .75rem 0 0;
 }
+
 .event-card .image img {
   position: absolute;
   top: 0;
@@ -48,27 +77,32 @@ defineProps({
   object-fit: cover;
   transition: all .5s ease-in-out;
 }
+
 .event-card .image:hover img {
   transform: scale(1.1);
 }
+
 .event-card .btn {
   width: 100%;
   border-radius: .5rem;
   color: var(--white-color);
   padding: .75rem 1.5rem;
 }
-.event-card .btn.bg-secondary{
-  border-color: var(--secondary-color);
-}
-.event-card .btn.outline{
+
+.event-card .btn.bg-secondary {
   border-color: var(--secondary-color);
 }
 
-.event-card .btn.bg-secondary:hover{
-  border-color: var(--alternative-color);
-  background-color: var(--alternative-color);
+.event-card .btn.outline {
+  border-color: var(--secondary-color);
 }
-.event-card .btn.outline:hover{
+
+.event-card .btn.bg-secondary:hover {
+  border-color:  rgb(from var(--secondary-color)r g b / 80%);
+  background-color: rgb(from var(--secondary-color)r g b / 80%);
+}
+
+.event-card .btn.outline:hover {
   background-color: var(--secondary-color);
 }
 </style>
