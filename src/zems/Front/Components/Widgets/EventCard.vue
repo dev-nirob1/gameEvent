@@ -98,7 +98,7 @@ defineProps({
 }
 
 .event-card .btn.bg-secondary:hover {
-  border-color:  rgb(from var(--secondary-color)r g b / 80%);
+  border-color: rgb(from var(--secondary-color)r g b / 80%);
   background-color: rgb(from var(--secondary-color)r g b / 80%);
 }
 

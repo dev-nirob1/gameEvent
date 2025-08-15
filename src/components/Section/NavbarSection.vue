@@ -95,6 +95,7 @@ onMounted(() => {
 }
 
 .navbar {
+  display: none;
   backdrop-filter: blur(50px);
   color: var(--white-color);
   box-shadow: var(--box-shadow);
@@ -148,7 +149,10 @@ onMounted(() => {
   justify-content: center;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .navbar{
+    display: block;
+  }
   .navbar ul {
     position: inherit;
     display: flex;

@@ -1,5 +1,6 @@
 <script setup>
 import FooterSection from '@/components/Section/FooterSection.vue';
+import MobileMenu from '@/components/Section/MobileMenu.vue';
 import NavbarSection from '@/components/Section/NavbarSection.vue';
 import { RouterView } from 'vue-router';
 
@@ -7,6 +8,14 @@ import { RouterView } from 'vue-router';
 
 <template>
   <NavbarSection />
-  <RouterView />
+  <MobileMenu/>
+  <main>
+    <RouterView />
+  </main>
   <FooterSection />
 </template>
+<style scoped>
+main{
+  padding-bottom: 4rem;
+}
+</style>

@@ -66,7 +66,9 @@ const currentYear = new Date().getFullYear();
 
 
 <style scoped>
+
 .footer {
+  display: none;
   background-color: var(--primary-color);
   color: var(--white-color);
 }
@@ -93,7 +95,7 @@ const currentYear = new Date().getFullYear();
 .logo img {
   height: auto;
   width: 60px;
-  ;
+
 }
 
 
@@ -191,5 +193,10 @@ const currentYear = new Date().getFullYear();
   font-size: 14px;
   text-align: center;
   background: rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px){
+  .footer{
+    display: block;
+  }
 }
 </style>
