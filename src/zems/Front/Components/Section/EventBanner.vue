@@ -52,8 +52,8 @@ defineProps({
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgb(from var(--secondary-color)r g b / 50%),
-      rgba(0, 0, 0, 0.2));
+  background: linear-gradient(rgb(from var(--primary-color)r g b / 60%),
+      rgb(from var(--primary-color)r g b / 60%));
   display: flex;
   align-items: center;
   justify-content: center;
