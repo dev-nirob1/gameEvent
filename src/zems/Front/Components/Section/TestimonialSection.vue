@@ -77,10 +77,20 @@ const activeReview = computed(() => {
 }
 
 .testimonials .btn-prev {
+  left: -1rem;
+}
+
+.testimonials .btn-next {
+  right: -1rem;
+}
+
+@media (min-width: 768px){
+  .testimonials .btn-prev {
   left: 0;
 }
 
 .testimonials .btn-next {
   right: 0;
+}
 }
 </style>

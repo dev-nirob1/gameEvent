@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="testimonial-card">
-    <i class="bg-graphic fa-solid fa-quote-right fa-10x"></i>
+    <i class="bg-graphic fa-solid fa-quote-right fa-8x"></i>
 
     <div class="flex align-center gap-1">
       <BaseImage class="height-full width-full"
@@ -37,7 +37,6 @@ defineProps({
   padding: 2rem 1.5rem;
   background: rgb(from var(--secondary-color)r g b / 5%);
   box-shadow: var(--box-shadow);
-  z-index: 1;
 }
 
 .testimonial-card img {
@@ -68,7 +67,6 @@ defineProps({
 
   .bg-graphic {
     right: 2rem;
-    bottom: 0;
   }
 }
 </style>
