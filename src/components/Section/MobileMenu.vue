@@ -19,9 +19,9 @@
       </RouterLink>
     </li>
     <li>
-      <RouterLink to="/leaderboard">
+      <RouterLink to="/activity">
         <i class="fa-solid fa-trophy"></i>
-        <span>Leaderboard</span>
+        <span>Activity</span>
       </RouterLink>
     </li>
   </ul>

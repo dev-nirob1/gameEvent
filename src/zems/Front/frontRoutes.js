@@ -3,7 +3,7 @@ import ContactPage from "./Pages/ContactPage.vue";
 import EventDetails from "./Pages/EventDetails.vue";
 import EventsPage from "./Pages/EventsPage.vue";
 import HomePage from "./Pages/HomePage.vue";
-import LeaderBoard from "./Pages/LeaderBoard.vue";
+import ActivityPage from "./Pages/ActivityPage.vue";
 
 export default [
   {
@@ -31,9 +31,9 @@ export default [
           component: ContactPage
         },
         {
-          path: "/leaderboard",
-          name: "leaderboard",
-          component: LeaderBoard
+          path: "/activity",
+          name: "activity",
+          component: ActivityPage
         },
     ]
   }

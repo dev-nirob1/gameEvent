@@ -11,7 +11,7 @@ const currentYear = new Date().getFullYear();
         <RouterLink to="/" class="logo">
           <div>
             <BaseTitle>LudoClash</BaseTitle>
-            <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
+            <BaseParagraph>Roll. Win. Conquer. Repeat.</BaseParagraph>
           </div>
         </RouterLink>
         <BaseParagraph>

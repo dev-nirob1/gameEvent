@@ -31,7 +31,7 @@ watchEffect(() => {
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
         <div>
           <BaseTitle>LudoClash</BaseTitle>
-          <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
+          <BaseParagraph>Roll. Win. Conquer. Repeat.</BaseParagraph>
         </div>
       </RouterLink>
       <div class="profile">
@@ -51,7 +51,7 @@ watchEffect(() => {
           <RouterLink to="/contact-us">Contact Us</RouterLink>
         </ListItem>
         <ListItem>
-          <RouterLink to="/leaderboard">Leaderboard</RouterLink>
+          <RouterLink to="/activity">Activity</RouterLink>
         </ListItem>
       </ul>
     </nav>
