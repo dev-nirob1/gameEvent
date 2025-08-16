@@ -18,7 +18,7 @@ defineProps({
       <BaseImage :image="image" alt="banner" />
     </div>
     <div class="overlay">
-      <div class="content">
+      <div class="content px-1">
         <BaseTitle>{{ name }}</BaseTitle>
         <p>{{ description }}</p>
         <div class="flex gap-1 justify-center">

@@ -4,27 +4,28 @@ import TestimonialCard from '../Widgets/TestimonialCard.vue';
 
 const testimonials = ref([
   {
-    "id": 1,
-    "image": "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "name": "John Doe",
-    "role": "Manager",
-    "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime maiores totam suscipit perspiciatis doloremque ipsam?"
+    id: 1,
+    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    name: "John Carter",
+    role: "Champion 2024",
+    review: "The Ludo Battle Royale was thrilling! The competition was intense, and I loved the fair play and organization. Can't wait for next year!"
   },
   {
-    "id": 2,
-    "image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "name": "Jane Smith",
-    "role": "Event Coordinator",
-    "review": "Amet consectetur adipisicing elit. Quisquam voluptatum voluptatem, quia voluptas quidem quibusdam."
+    id: 2,
+    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    name: "Emily Watson",
+    role: "Event Participant",
+    review: "Amazing experience participating in the Ludo event. The rules were clear, the matches exciting, and the support team was very helpful."
   },
   {
-    "id": 3,
-    "image": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "name": "Alex Johnson",
-    "role": "Marketing Head",
-    "review": "Dolor sit amet consectetur adipisicing elit. Quisquam voluptatum voluptatem, quia voluptas quidem quibusdam."
+    id: 3,
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    name: "Michael Brown",
+    role: "Event Organizer",
+    review: "Organizing the Ludo Battle Royale was a fantastic journey. Seeing participants enjoy and compete fairly made all the effort worthwhile."
   }
 ])
+
 
 const currentReviewId = ref(1)
 

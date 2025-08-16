@@ -113,4 +113,8 @@ const event = {
 .event-details .statistics li p {
   margin: 0;
 }
+
+.event-details ul {
+  padding-left: 1.5rem;
+}
 </style>
