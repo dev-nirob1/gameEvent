@@ -1,20 +1,7 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import BaseButton from '../Elements/BaseButton.vue';
-import BaseParagraph from '../Elements/BaseParagraph.vue';
-import BaseTitle from '../Elements/BaseTitle.vue';
-import ListItem from '../Elements/ListItem.vue';
-
-const isMenuOpen = ref(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
+import { onMounted } from 'vue';
 onMounted(() => {
   const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelector('.nav-links')
-
   window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
       navbar.classList.add('scrolling');
@@ -22,13 +9,7 @@ onMounted(() => {
       navbar.classList.remove('scrolling');
     }
   });
-  // console.log(navbar.childNodes);
-  navLinks.childNodes.forEach(element => {
-    element.addEventListener('click', () => {
-      isMenuOpen.value = false
-    })
-  });
-})
+});
 </script>
 
 <template>
@@ -36,7 +17,6 @@ onMounted(() => {
   <header class="navbar">
     <nav class="flex justify-between align-center gap-1 container">
       <!-- Mobile Menu Toggle Button -->
-
       <!-- Logo -->
       <RouterLink to="/" class="logo">
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
@@ -45,11 +25,11 @@ onMounted(() => {
           <BaseParagraph>Roll the dice. Rule the board.</BaseParagraph>
         </div>
       </RouterLink>
-      <BaseButton class="hamburger" @click="toggleMenu">
-        <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
-      </BaseButton>
+      <div class="profile">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile">
+      </div>
       <!-- Navigation Links -->
-      <ul class="nav-links" :class="{ 'active': isMenuOpen }">
+      <ul class="nav-links">
         <ListItem>
           <RouterLink to="/">Home</RouterLink>
         </ListItem>
@@ -75,6 +55,27 @@ onMounted(() => {
   transition: background-color 0.3s ease;
 }
 
+.navbar {
+  backdrop-filter: blur(50px);
+  color: var(--white-color);
+  box-shadow: var(--box-shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: .5rem 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .profile {
+  width: 3rem;
+  height: 3rem;
+}
+.navbar .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 /* Logo Styles */
 .logo {
   display: flex;
@@ -89,45 +90,18 @@ onMounted(() => {
   padding: 0;
   font-size: 0.9rem;
 }
+
 .logo img {
   height: auto;
-  width: 60px;;
-}
-
-.navbar {
-  display: none;
-  backdrop-filter: blur(50px);
-  color: var(--white-color);
-  box-shadow: var(--box-shadow);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: .5rem 0;
-  width: 100%;
-  z-index: 999;
-}
-
-.navbar ul {
-  position: absolute;
-  left: -100%;
-  top: 0;
-  list-style: none;
-  padding: 2rem;
-  margin: 0;
-  background-color: var(--primary-color);
-  height: 100vh;
-  width: 60%;
-  transition: all .5s;
-}
-
-.navbar .active {
-  left: 0;
+  width: 60px;
 }
 
 .navbar a {
   text-decoration: none;
 }
-
+.navbar ul  {
+  display: none;
+}
 .navbar ul li a {
   position: relative;
   display: inline-block;
@@ -136,24 +110,12 @@ onMounted(() => {
   padding: 0.5rem 0;
 }
 
-/* Mobile menu toggle */
-.hamburger {
-  display: block;
-  color: var(--white-color) !important;
-  border: none;
-  cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (min-width: 768px) {
-  .navbar{
-    display: block;
+  .navbar .profile{
+    display: none;
   }
   .navbar ul {
+    list-style:none;
     position: inherit;
     display: flex;
     align-items: center;
@@ -175,14 +137,8 @@ onMounted(() => {
     background: var(--secondary-color);
     transition: width 0.3s ease;
   }
-
   .navbar ul li a:hover::after {
     width: 100%;
-  }
-
-  /* expand navlinks on desktop  */
-  .hamburger {
-    display: none;
   }
 }
 </style>
