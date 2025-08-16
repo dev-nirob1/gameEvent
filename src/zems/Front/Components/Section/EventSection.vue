@@ -56,7 +56,5 @@ const events = [
 <style scoped>
 .events-section {
   padding: 3.75rem 0;
-  color: var(--white-color);
-  background-color: var(--primary-color);
 }
 </style>

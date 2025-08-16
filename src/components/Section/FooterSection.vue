@@ -55,7 +55,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom bg-light">
       <BaseParagraph>&copy; {{ currentYear }} LudoX. All rights reserved.</BaseParagraph>
       <div class="flex align-center justify-center gap-1">
         <a href="#">Privacy Policy</a> <a href="#">Terms & Conditions</a>
@@ -66,7 +66,6 @@ const currentYear = new Date().getFullYear();
 
 
 <style scoped>
-
 .footer {
   display: none;
   background-color: var(--primary-color);
@@ -192,7 +191,6 @@ const currentYear = new Date().getFullYear();
   padding: 1.5rem;
   font-size: 14px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px){
   .footer{

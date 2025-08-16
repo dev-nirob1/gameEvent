@@ -8,7 +8,7 @@ const playVideo = () => {
 </script>
 
 <template>
-  <section class="video-info">
+  <section class="video-info bg-light">
     <div class="container">
       <div class="medium-2 gap-2">
         <div class="video relative order-2 medium-order-1">
@@ -57,7 +57,6 @@ const playVideo = () => {
 <style scoped>
 .video-info {
   padding: 3.75rem 0;
-  background: url('background.svg') center / cover no-repeat fixed;
 }
 
 .image {
@@ -74,7 +73,6 @@ const playVideo = () => {
 }
 
 .play-icon {
-  color: var(--secondary-color);
   position: absolute;
   top: 50%;
   left: 50%;

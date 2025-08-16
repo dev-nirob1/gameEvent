@@ -36,7 +36,7 @@ defineProps({
 <style scoped>
 .event-card {
   border-radius: .75rem;
-  background-color: rgb(from var(--secondary-color)r g b / 5%);
+  background-color: rgb(from var(--secondary-color)r g b / 10%);
   box-shadow: var(--box-shadow);
   position: relative;
 }

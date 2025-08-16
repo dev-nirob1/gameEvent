@@ -24,18 +24,17 @@ const steps = ref([
 </script>
 
 <template>
-  <section class="how-to-play">
+  <section class="how-to-play bg-light">
     <div class="container">
       <BaseTitle class="text-center mb-5">How To Play</BaseTitle>
       <div class="medium-3 gap-2 pl-2 relative">
 
         <div v-for="(step, i) in steps" :key="step.id" class="timeline-card">
-          <span class="number">{{ i }}</span>
+          <span class="number">{{ i + 1 }}</span>
           <BaseImage :image="step.icon" />
           <SubTitle class="mt-1">{{ step.title }}</SubTitle>
           <BaseParagraph>{{ step.description }}</BaseParagraph>
         </div>
-
       </div>
     </div>
   </section>
@@ -43,7 +42,6 @@ const steps = ref([
 <style scoped>
 .how-to-play {
   padding: 3.75rem 0;
-  background: url('background.svg') center / cover no-repeat fixed;
 }
 
 .how-to-play .timeline-card {
