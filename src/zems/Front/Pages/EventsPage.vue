@@ -6,5 +6,5 @@ import EventSection from '../Components/Section/EventSection.vue';
 
 <template>
   <BreadCrumb/>
-  <EventSection/>
+  <EventSection class="bg-light"/>
 </template>

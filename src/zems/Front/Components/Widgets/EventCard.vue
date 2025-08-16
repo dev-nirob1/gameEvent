@@ -16,10 +16,12 @@ defineProps({
     </div>
     <div class="p-1">
       <BaseParagraph class="price-badge">Fee: 5$</BaseParagraph>
+
       <div class="flex justify-between">
         <BaseParagraph>Starts: 15-aug 2025</BaseParagraph>
         <BaseParagraph>Prize: <strong>60</strong>$</BaseParagraph>
       </div>
+
       <SubTitle>{{ event.name }}</SubTitle>
       <BaseParagraph>{{ event.description.substring(0, 70) }}...
       </BaseParagraph>
@@ -56,8 +58,12 @@ defineProps({
   text-decoration: none;
 }
 
-.event-card p {
+.event-card .sub-title {
   margin: .5rem 0;
+}
+
+.event-card p {
+  margin: 0 0 .5rem 0;
 }
 
 .event-card .image {

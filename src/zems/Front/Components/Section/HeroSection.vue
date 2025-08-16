@@ -15,7 +15,7 @@
 </template>
 <style scoped>
 .hero {
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +57,9 @@
 }
 
 @media (min-width: 768px) {
+  .hero {
+  min-height: 100vh;
+  }
   .hero .content {
     max-width: 80%;
   }
