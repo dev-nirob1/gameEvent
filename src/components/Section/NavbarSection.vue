@@ -1,5 +1,6 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref, watchEffect } from 'vue';
+import { useRoute } from 'vue-router';
 onMounted(() => {
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
@@ -10,13 +11,20 @@ onMounted(() => {
     }
   });
 });
+
+const route = useRoute()
+const routeName = ref(route.name)
+
+watchEffect(() => {
+  routeName.value = route.name
+})
+
 </script>
 
 <template>
   <!-- ======== Navbar section ======== -->
-  <header class="navbar">
+  <header class="navbar" :class="{ 'mobile-home': routeName === 'home' }">
     <nav class="flex justify-between align-center gap-1 container">
-      <!-- Mobile Menu Toggle Button -->
       <!-- Logo -->
       <RouterLink to="/" class="logo">
         <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
@@ -26,7 +34,9 @@ onMounted(() => {
         </div>
       </RouterLink>
       <div class="profile">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile">
+        <img
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="profile">
       </div>
       <!-- Navigation Links -->
       <ul class="nav-links">
@@ -55,6 +65,10 @@ onMounted(() => {
   transition: background-color 0.3s ease;
 }
 
+.navbar.mobile-home {
+  display: block;
+}
+
 .navbar {
   backdrop-filter: blur(50px);
   color: var(--white-color);
@@ -66,16 +80,19 @@ onMounted(() => {
   width: 100%;
   z-index: 999;
 }
+
 .navbar .profile {
   width: 3rem;
   height: 3rem;
 }
+
 .navbar .profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
+
 /* Logo Styles */
 .logo {
   display: flex;
@@ -99,9 +116,11 @@ onMounted(() => {
 .navbar a {
   text-decoration: none;
 }
-.navbar ul  {
+
+.navbar ul {
   display: none;
 }
+
 .navbar ul li a {
   position: relative;
   display: inline-block;
@@ -111,11 +130,12 @@ onMounted(() => {
 }
 
 @media (min-width: 768px) {
-  .navbar .profile{
+  .navbar .profile {
     display: none;
   }
+
   .navbar ul {
-    list-style:none;
+    list-style: none;
     position: inherit;
     display: flex;
     align-items: center;
@@ -137,6 +157,7 @@ onMounted(() => {
     background: var(--secondary-color);
     transition: width 0.3s ease;
   }
+
   .navbar ul li a:hover::after {
     width: 100%;
   }
