@@ -17,6 +17,7 @@ const routeName = ref(route.name)
 
 watchEffect(() => {
   routeName.value = route.name
+  console.log(routeName);
 })
 
 </script>
@@ -59,9 +60,9 @@ watchEffect(() => {
 
 
 <style scoped>
-/* background-color change on animation  */
+/* background-color change on scrolling  */
 .navbar.scrolling {
-  background: rgb(from var(--secondary-color)r g b / 40%);
+  background: var(--alternative-color);
   transition: background-color 0.3s ease;
 }
 
@@ -70,6 +71,7 @@ watchEffect(() => {
 }
 
 .navbar {
+  display: none;
   backdrop-filter: blur(50px);
   color: var(--white-color);
   box-shadow: var(--box-shadow);
@@ -133,7 +135,9 @@ watchEffect(() => {
   .navbar .profile {
     display: none;
   }
-
+.navbar {
+  display:block;
+}
   .navbar ul {
     list-style: none;
     position: inherit;

@@ -39,9 +39,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #1e3a8a; /* Replace with your primary color */
-  color: white;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--alternative-color);
+  color: var(--white-color);
   z-index: 1000;
 }
 
@@ -55,13 +54,9 @@
   flex-direction: column;
   align-items: center;
   padding: 0.5rem 0;
-  color: white;
+  color: var(--white-color);
   font-size: 14px;
   text-decoration: none;
-}
-
-.mobile-nav-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-nav-links i {
