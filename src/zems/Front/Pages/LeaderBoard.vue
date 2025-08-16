@@ -12,7 +12,7 @@ const leaderboard = [
 
 <template>
   <BreadCrumb/>
-  <section class="leaderboard">
+  <section class="leaderboard bg-light">
 
     <div class="container">
       <div class="table">
@@ -56,6 +56,6 @@ const leaderboard = [
 <style scoped>
 .leaderboard {
   padding: 3.5rem 0;
-  background: url('/background.svg') center / cover no-repeat fixed;
+
 }
 </style>

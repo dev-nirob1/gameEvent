@@ -51,7 +51,7 @@ onMounted(() => {
 <style scoped>
 /* background-color change on animation  */
 .navbar.scrolling {
-  background: var(--primary-color);
+  background: rgb(from var(--secondary-color)r g b / 40%);
   transition: background-color 0.3s ease;
 }
 

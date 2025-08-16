@@ -1,10 +1,10 @@
 <template>
-  <section class="contact">
+  <section class="contact bg-light">
     <div class="container">
       <div class="medium-2 gap-2">
         <div class="contact-info">
           <BaseTitle class="">We're here to help</BaseTitle>
-          <BaseParagraph>Got a question about our tournaments or games? We’re here to help you roll your way to victory!
+          <BaseParagraph>Got a question about our tournaments or games? We're here to help you roll your way to victory!
           </BaseParagraph>
           <ul>
             <ListItem><i class="fa-solid fa-phone"></i> +880 1234 567 890</ListItem>
@@ -36,7 +36,6 @@
 <style scoped>
 .contact {
   padding: 3.75rem 0;
-  background: url('background.svg') center / cover no-repeat fixed;
 }
 
 .contact .contact-info ul {
@@ -57,7 +56,7 @@ input,
 textarea {
   padding: 1em;
   margin: .25rem 0 .75rem 0;
-  border-color: rgb(from var(--secondary-color)r g b / 5%);
+  border-color: rgb(from var(--secondary-color)r g b / 10%);
   background-color: rgb(from var(--primary-color)r g b / 90%);
   border-radius: .5rem;
   color: var(--white-color);
