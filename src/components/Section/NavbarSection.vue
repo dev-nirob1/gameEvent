@@ -28,12 +28,9 @@ watchEffect(() => {
     <nav class="flex justify-between align-center gap-1 container">
       <!-- Logo -->
       <RouterLink to="/" class="logo">
-        <!-- <img class="height-full" src="/logo.png" alt="logo" /> -->
-        <div>
-          <BaseTitle>LudoClash</BaseTitle>
-          <BaseParagraph>Roll. Win. Conquer. Repeat.</BaseParagraph>
-        </div>
+        <img src="/logo.png" alt="logo" />
       </RouterLink>
+
       <div class="profile">
         <img
           src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -84,8 +81,8 @@ watchEffect(() => {
 }
 
 .navbar .profile {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .navbar .profile img {
@@ -97,33 +94,20 @@ watchEffect(() => {
 
 /* Logo Styles */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
-  text-decoration: none;
-  color: var(--white-color) !important;
-}
-
-.logo p {
-  margin: 0;
-  padding: 0;
-  font-size: 0.9rem;
+  height: 2rem;
+  width: auto;
 }
 
 .logo img {
-  height: auto;
-  width: 60px;
+  height: 100%;
+  width: 100%;
 }
-
 .navbar a {
   text-decoration: none;
 }
-
 .navbar ul {
   display: none;
 }
-
 .navbar ul li a {
   position: relative;
   display: inline-block;
@@ -131,16 +115,18 @@ watchEffect(() => {
   transition: color 0.3s ease-in-out;
   padding: 0.5rem 0;
 }
-
 @media (min-width: 768px) {
-  .navbar .profile {
-    display: none;
-  }
-
   .navbar {
     display: block;
   }
 
+.navbar .logo {
+  height: 4rem;
+  width: auto;
+}
+  .navbar .profile {
+    display: none;
+  }
   .navbar ul {
     list-style: none;
     position: inherit;
@@ -164,11 +150,9 @@ watchEffect(() => {
     background: var(--secondary-color);
     transition: width 0.3s ease;
   }
-
   .navbar ul li a:hover::after {
     width: 100%;
   }
-
   .navbar .router-link-exact-active {
     color: var(--secondary-color);
   }

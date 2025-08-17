@@ -19,7 +19,7 @@ defineProps({
 
       <div class="flex justify-between">
         <BaseParagraph><i class="fa-solid fa-calendar-days"></i> {{ event.startDate }} - 6:00pm</BaseParagraph>
-        <BaseParagraph><i class="fa-solid fa-crown"></i> $<strong>{{ event.prize }}</strong></BaseParagraph>
+        <BaseParagraph><i class="fa-solid fa-trophy"></i> $<strong>{{ event.prize }}</strong></BaseParagraph>
       </div>
 
       <SubTitle>{{ event.name }}</SubTitle>
