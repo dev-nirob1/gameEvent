@@ -15,7 +15,7 @@ const withdrawalHistory = [
 
     <div class="container">
 
-      <SubTitle>Withdrawal History</SubTitle>
+      <BaseTitle class="mb-2 text-center">Withdraw History</BaseTitle>
       <!-- my withdrawal history-->
       <div class="table">
         <div class="table-header">
@@ -57,9 +57,5 @@ const withdrawalHistory = [
 <style scoped>
 .withdraw-history {
   padding: 3.5rem 0;
-}
-.withdraw-history .sub-title {
-  margin-bottom: 2rem;
-  text-align: center;
 }
 </style>

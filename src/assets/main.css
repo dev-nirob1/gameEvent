@@ -10,8 +10,8 @@ html {
   --montserrat-font: 'Montserrat', sans-serif;
   --roboto-font: 'Roboto', serif;
 
-  --primary-color: #0C0C1D ;
-  --secondary-color:#3b82f6 ;
+  --primary-color: #0c0c1d;
+  --secondary-color: #3b82f6;
   --alternative-color: #1e3a8a;
   --white-color: #edf0f9;
   --border-color: #334155;
@@ -36,7 +36,7 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   color: var(--white-color);
-  background-color: #0C0C1D;
+  background-color: #0c0c1d;
 }
 
 h1,
@@ -163,13 +163,20 @@ a {
   border: 2px solid;
   outline: none;
   font-weight: 500;
+  color: var(--white-color);
   /* padding: 1rem 1rem; */
   border-radius: 4px;
   font-size: 1rem;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
-
+.btn.bg-secondary {
+  
+  border-color: var(--secondary-color);
+}
+.btn.bg-secondary:hover {
+  background-color: rgb(from var(--secondary-color) r g b / 80%);
+}
 
 /* table styles  */
 

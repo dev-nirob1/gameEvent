@@ -104,9 +104,7 @@ watchEffect(() => {
   text-decoration: none;
   color: var(--white-color) !important;
 }
-.logo .title {
-  font-size: 1.25rem
-}
+
 .logo p {
   margin: 0;
   padding: 0;

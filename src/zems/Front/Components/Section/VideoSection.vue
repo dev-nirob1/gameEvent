@@ -46,7 +46,6 @@ const playVideo = () => {
               <i class="fa-solid fa-globe"></i> Global Participation
             </li>
           </ul>
-
           <BaseButton class="bg-secondary">Register Now</BaseButton>
         </div>
       </div>
@@ -77,12 +76,12 @@ const playVideo = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--white-color);
 }
 
 .content ul {
   list-style: none;
   padding-left: .25rem;
+  margin: 0;
 }
 
 .content ul li {
@@ -93,19 +92,8 @@ const playVideo = () => {
   color: var(--secondary-color);
   margin-right: .25rem;
 }
-
 .content .btn {
-  padding: .75rem 1rem;
-  border-radius: .5rem;
-  border-color: var(--secondary-color);
-  color: var(--white-color);
   width: fit-content;
 }
 
-@media (min-width: 768px) {
-  .content .btn {
-    padding: 1rem 2rem;
-    width: fit-content;
-  }
-}
 </style>

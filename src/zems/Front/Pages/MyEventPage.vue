@@ -10,7 +10,7 @@ const myEvent = [
   <BreadCrumb />
   <section class="my-events bg-light">
     <div class="container">
-      <SubTitle>My Events</SubTitle>
+      <BaseTitle class="text-center mb-2">My Events</BaseTitle>
       <!-- my events  -->
       <div class="table">
         <div class="table-header">
@@ -58,8 +58,4 @@ const myEvent = [
   padding: 3.75rem 0;
 }
 
-.my-events .sub-title {
-  margin-bottom: 2rem;
-  text-align: center;
-}
 </style>
