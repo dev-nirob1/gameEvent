@@ -42,16 +42,17 @@ const steps = ref([
 .how-to-play {
   padding: 3.75rem 0;
 }
+
 .how-to-play .medium-3 {
   padding-left: 2rem;
 }
 
 .how-to-play .timeline-card {
+  position: relative;
   padding: 2rem;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: .75rem;
   background: rgb(from var(--secondary-color)r g b / 15%);
-  position: relative;
 }
 
 .how-to-play .timeline-card::before {
@@ -93,8 +94,9 @@ const steps = ref([
 
 @media (min-width: 768px) {
   .how-to-play .medium-3 {
-  padding-left: 0;
-}
+    padding-left: 0;
+  }
+
   .how-to-play .timeline-card::before {
     top: -2rem;
     left: 0;

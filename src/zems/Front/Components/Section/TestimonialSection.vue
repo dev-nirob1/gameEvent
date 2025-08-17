@@ -26,23 +26,23 @@ const testimonials = ref([
   }
 ])
 
+const currentIndex = ref(0)
 
-const currentReviewId = ref(1)
-
+// handle previous button
 const handlePrevReview = () => {
-  if (currentReviewId.value > 1) {
-    currentReviewId.value--
+  if (currentIndex.value > 0) {
+    currentIndex.value--
   }
 }
-
+// handle next button
 const handleNextReview = () => {
-  if (currentReviewId.value < testimonials.value.length) {
-    currentReviewId.value++
+  if (currentIndex.value < testimonials.value.length - 1) {
+    currentIndex.value++
   }
 }
 
 const activeReview = computed(() => {
-  return testimonials.value.find(t => t.id == currentReviewId.value)
+  return testimonials.value.find((t, i) => i == currentIndex.value)
 })
 </script>
 
@@ -55,10 +55,12 @@ const activeReview = computed(() => {
         <TestimonialCard v-if="activeReview" :review="activeReview" />
       </div>
 
-      <BaseButton @click="handlePrevReview" class="btn-prev">
+      <BaseButton @click="handlePrevReview" :disabled="currentIndex == 0" class="btn-prev"
+        :class="{ 'disabled': currentIndex == 0 }">
         <i class="fa-solid fa-arrow-left"></i>
       </BaseButton>
-      <BaseButton @click="handleNextReview" class="btn-next">
+      <BaseButton @click="handleNextReview" :disabled="currentIndex == testimonials.length - 1" class="btn-next"
+        :class="{ 'disabled': currentIndex == testimonials.length - 1 }">
         <i class="fa-solid fa-arrow-right"></i>
       </BaseButton>
     </div>
@@ -71,7 +73,6 @@ const activeReview = computed(() => {
 
 .testimonials .btn {
   position: absolute;
-  color: var(--white-color);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -84,13 +85,18 @@ const activeReview = computed(() => {
   right: -1rem;
 }
 
-@media (min-width: 768px){
-  .testimonials .btn-prev {
-  left: 0;
+.disabled {
+  cursor: not-allowed;
+  opacity: 50%;
 }
 
-.testimonials .btn-next {
-  right: 0;
-}
+@media (min-width: 768px) {
+  .testimonials .btn-prev {
+    left: 0;
+  }
+
+  .testimonials .btn-next {
+    right: 0;
+  }
 }
 </style>

@@ -43,7 +43,6 @@ defineProps({
   padding: 0;
   max-height: 0;
   overflow: hidden;
-  /* background-color: var(--white-color); */
   transition: all 0.3s ease;
 }
 .accordion-body.active {
