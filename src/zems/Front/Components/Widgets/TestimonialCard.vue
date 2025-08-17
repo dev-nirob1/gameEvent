@@ -35,7 +35,7 @@ defineProps({
   border-radius: .75rem;
   position: relative;
   padding: 2rem 1.5rem;
-  background: rgb(from var(--secondary-color)r g b / 5%);
+  background: rgb(from var(--secondary-color)r g b / 10%);
   box-shadow: var(--box-shadow);
 }
 
@@ -55,7 +55,6 @@ defineProps({
 }
 
 @media (min-width: 992px) {
-
   .testimonial-card {
     max-width: 70%;
   }

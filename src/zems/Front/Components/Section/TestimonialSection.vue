@@ -51,10 +51,12 @@ const activeReview = computed(() => {
     <div class="container relative">
       <BaseTitle class="text-center mb-3">Gamers Feedback</BaseTitle>
 
+      <!-- testimonials card  -->
       <div>
         <TestimonialCard v-if="activeReview" :review="activeReview" />
       </div>
 
+      <!-- next-prev action buttons -->
       <BaseButton @click="handlePrevReview" :disabled="currentIndex == 0" class="btn-prev"
         :class="{ 'disabled': currentIndex == 0 }">
         <i class="fa-solid fa-arrow-left"></i>
