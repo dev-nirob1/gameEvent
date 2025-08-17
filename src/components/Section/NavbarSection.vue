@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
+
 onMounted(() => {
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
@@ -14,6 +15,7 @@ onMounted(() => {
 
 const route = useRoute()
 const routeName = ref(route.name)
+
 
 watchEffect(() => {
   routeName.value = route.name
@@ -75,7 +77,7 @@ watchEffect(() => {
   position: fixed;
   top: 0;
   left: 0;
-  padding: .5rem 0;
+  padding: .25rem 0;
   width: 100%;
   z-index: 999;
 }
@@ -102,12 +104,15 @@ watchEffect(() => {
   height: 100%;
   width: 100%;
 }
+
 .navbar a {
   text-decoration: none;
 }
+
 .navbar ul {
   display: none;
 }
+
 .navbar ul li a {
   position: relative;
   display: inline-block;
@@ -115,18 +120,22 @@ watchEffect(() => {
   transition: color 0.3s ease-in-out;
   padding: 0.5rem 0;
 }
+
 @media (min-width: 768px) {
   .navbar {
     display: block;
+    padding: .5rem 0;
   }
 
-.navbar .logo {
-  height: 4rem;
-  width: auto;
-}
+  .navbar .logo {
+    height: 4rem;
+    width: auto;
+  }
+
   .navbar .profile {
     display: none;
   }
+
   .navbar ul {
     list-style: none;
     position: inherit;
@@ -150,9 +159,11 @@ watchEffect(() => {
     background: var(--secondary-color);
     transition: width 0.3s ease;
   }
+
   .navbar ul li a:hover::after {
     width: 100%;
   }
+
   .navbar .router-link-exact-active {
     color: var(--secondary-color);
   }

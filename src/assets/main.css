@@ -164,7 +164,7 @@ a {
   outline: none;
   font-weight: 500;
   color: var(--white-color);
-  /* padding: 1rem 1rem; */
+  padding: 0.75rem;
   border-radius: 4px;
   font-size: 1rem;
   text-align: center;
@@ -176,7 +176,7 @@ a {
 .btn.bg-secondary:hover {
   background-color: rgb(from var(--secondary-color) r g b / 80%);
 }
-.btn.outline{
+.btn.outline {
   border-color: var(--secondary-color);
 }
 .btn.outline:hover {

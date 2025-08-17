@@ -26,10 +26,8 @@ defineProps({
       <BaseParagraph>{{ event.description.substring(0, 70) }}...
       </BaseParagraph>
 
-      <div class="flex gap-1">
-        <BaseButton class="bg-secondary width-full">
-          <RouterLink to="/events-details/hello">Details</RouterLink>
-        </BaseButton>
+      <div class="flex align-center gap-1">
+        <RouterLink class="btn bg-secondary width-full" to="/events-details/hello">Details</RouterLink>
         <BaseButton class="outline width-full">Entry</BaseButton>
       </div>
     </div>
@@ -57,6 +55,7 @@ defineProps({
 
 .event-card a {
   text-decoration: none;
+  padding: .5rem;
 }
 
 .event-card .sub-title {
