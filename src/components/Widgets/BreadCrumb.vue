@@ -2,7 +2,10 @@
 import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
-// const router = useRouter()
+
+const handleGoBack = () => {
+  window.history.back()
+}
 
 </script>
 
@@ -11,7 +14,7 @@ const route = useRoute()
     <div class="container">
       <ul class="mobile-breadcrumb">
         <ListItem>
-          <BaseButton><i class="fa-solid fa-angle-left"></i></BaseButton>
+          <BaseButton @click="handleGoBack"><i class="fa-solid fa-angle-left"></i></BaseButton>
         </ListItem>
         <ListItem>{{ route.name }}</ListItem>
       </ul>

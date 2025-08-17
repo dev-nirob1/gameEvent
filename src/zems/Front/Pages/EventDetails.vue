@@ -4,7 +4,7 @@ import EventBanner from '../Components/Section/EventBanner.vue';
 const event = {
   name: 'Ludo Battle Royale',
   image: 'https://cdn.pixabay.com/photo/2018/10/04/07/18/game-3723084_1280.jpg',
-  date: '25 August 2025',
+  date: '25 Aug 2025',
   time: '6:00 PM',
   entryFee: '5',
   prizePool: '500',
@@ -28,10 +28,14 @@ const event = {
   }
 };
 
+const handleGoBack = () => {
+  window.history.back()
+}
+
 </script>
 
 <template>
-  <EventBanner :name="event.name" :description="event.description" :image="event.image"/>
+  <EventBanner :handleGoBack="handleGoBack" :name="event.name" :description="event.description" :image="event.image" />
 
   <!-- Event Details -->
   <section class="event-details">
@@ -48,21 +52,21 @@ const event = {
         <ListItem>
           <i class="fa-solid fa-trophy fa-3x"></i>
           <div>
-            <SubTitle>{{ event.prizePool }}</SubTitle>
+            <SubTitle>${{ event.prizePool }}</SubTitle>
             <BaseParagraph>Prize Pool</BaseParagraph>
           </div>
         </ListItem>
         <ListItem>
           <i class="fa-solid fa-percent fa-3x"></i>
           <div>
-            <SubTitle>{{ event.cutPercentage }}</SubTitle>
+            <SubTitle>{{ event.cutPercentage }}%</SubTitle>
             <BaseParagraph>Platform Cut</BaseParagraph>
           </div>
         </ListItem>
         <ListItem>
           <i class="fa-solid fa-calendar-days fa-3x"></i>
           <div>
-            <SubTitle>{{ event.date }}</SubTitle>
+            <SubTitle>{{ event.date }} - {{ event.time }}</SubTitle>
             <BaseParagraph>Starting</BaseParagraph>
           </div>
         </ListItem>
@@ -100,6 +104,7 @@ const event = {
 .event-details .statistics {
   padding: 0;
 }
+
 .event-details .statistics li {
   background: rgb(from var(--secondary-color) r g b / 15%);
   padding: 2rem;
@@ -110,6 +115,7 @@ const event = {
   text-align: center;
   border-radius: .75rem;
 }
+
 .event-details .statistics li p {
   margin: 0;
 }

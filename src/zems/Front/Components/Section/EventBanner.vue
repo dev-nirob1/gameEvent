@@ -8,6 +8,9 @@ defineProps({
   },
   image: {
     type: String
+  },
+  handleGoBack:{
+    type: Function
   }
 })
 </script>
@@ -22,7 +25,7 @@ defineProps({
         <BaseTitle>{{ name }}</BaseTitle>
         <p>{{ description }}</p>
         <div class="flex gap-1 justify-center">
-          <BaseButton class="outline"> <i class="fa-solid fa-arrow-left"></i> Go Back</BaseButton>
+          <BaseButton @click="handleGoBack" class="outline"> <i class="fa-solid fa-arrow-left"></i> Go Back</BaseButton>
           <BaseButton class="bg-secondary text-white">Register Now</BaseButton>
         </div>
       </div>
@@ -57,14 +60,6 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.overlay .btn.bg-secondary {
-  border-color: var(--secondary-color);
-}
-
-.overlay .btn.outline {
-  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
