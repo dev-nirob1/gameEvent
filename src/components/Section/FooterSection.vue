@@ -188,9 +188,12 @@ const currentYear = new Date().getFullYear();
 
 /* Footer copyright bar*/
 .footer-bottom {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 14px;
   text-align: center;
+}
+.footer-bottom p {
+  margin: 0 0 .75rem 0;
 }
 @media (min-width: 768px){
   .footer{

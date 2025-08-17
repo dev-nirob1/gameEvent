@@ -26,7 +26,7 @@ const steps = ref([
 <template>
   <section class="how-to-play bg-light">
     <div class="container">
-      <BaseTitle class="text-center mb-5">How To Play</BaseTitle>
+      <BaseTitle class="text-center mb-2 medium-mb-5">How To Play</BaseTitle>
       <div class="medium-3 gap-2 relative">
         <div v-for="(step, i) in steps" :key="step.id" class="timeline-card">
           <span class="number">{{ i + 1 }}</span>
