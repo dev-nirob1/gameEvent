@@ -171,13 +171,17 @@ a {
   transition: all 0.3s ease-in-out;
 }
 .btn.bg-secondary {
-  
   border-color: var(--secondary-color);
 }
 .btn.bg-secondary:hover {
   background-color: rgb(from var(--secondary-color) r g b / 80%);
 }
-
+.btn.outline{
+  border-color: var(--secondary-color);
+}
+.event-card .btn.outline:hover {
+  background-color: var(--secondary-color);
+}
 /* table styles  */
 
 .table {

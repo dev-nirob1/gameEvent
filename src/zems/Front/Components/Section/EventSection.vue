@@ -1,4 +1,5 @@
 <script setup>
+import SectionTitle from '@/components/Widgets/SectionTitle.vue';
 import EventCard from '../Widgets/EventCard.vue';
 
 const events = [
@@ -64,9 +65,11 @@ const events = [
 <template>
   <section class="events-section">
     <div class="container">
-      <BaseTitle class="text-center mb-2">Upcoming Events</BaseTitle>
+      <SectionTitle class="text-center mb-2">
+        Upcoming Events
+      </SectionTitle>
       <div class="medium-2 large-3 gap-2">
-        <EventCard v-for="event in events" :key="event.id" :event="event"/>
+        <EventCard v-for="event in events" :key="event.id" :event="event" />
       </div>
     </div>
   </section>

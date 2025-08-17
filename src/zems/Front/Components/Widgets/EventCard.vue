@@ -15,21 +15,22 @@ defineProps({
       <BaseImage :image="event.image" alt="project image" />
     </div>
     <div class="p-1">
-      <BaseParagraph class="price-badge">Fee: {{event.fee}}</BaseParagraph>
+      <BaseParagraph class="price-badge">Fee: ${{ event.fee }}</BaseParagraph>
 
       <div class="flex justify-between">
-        <BaseParagraph>Starts: {{event.startDate}}</BaseParagraph>
-        <BaseParagraph>Prize: <strong>{{ event.prize }}</strong>$</BaseParagraph>
+        <BaseParagraph><i class="fa-solid fa-calendar-days"></i> {{ event.startDate }} - 6:00pm</BaseParagraph>
+        <BaseParagraph><i class="fa-solid fa-crown"></i> $<strong>{{ event.prize }}</strong></BaseParagraph>
       </div>
 
       <SubTitle>{{ event.name }}</SubTitle>
       <BaseParagraph>{{ event.description.substring(0, 70) }}...
       </BaseParagraph>
+
       <div class="flex gap-1">
-        <BaseButton class="bg-secondary">
+        <BaseButton class="bg-secondary width-full">
           <RouterLink to="/events-details/hello">Details</RouterLink>
         </BaseButton>
-        <BaseButton class="outline">Entry</BaseButton>
+        <BaseButton class="outline width-full">Entry</BaseButton>
       </div>
     </div>
   </div>
@@ -59,7 +60,7 @@ defineProps({
 }
 
 .event-card .sub-title {
-  margin: .5rem 0;
+  margin: .25rem 0 .5rem 0;
 }
 
 .event-card p {
@@ -70,7 +71,7 @@ defineProps({
   position: relative;
   overflow: hidden;
   height: 220px;
-  width: auto;
+  width: 100%;
   border-radius: .75rem .75rem 0 0;
 }
 
@@ -86,29 +87,5 @@ defineProps({
 
 .event-card .image:hover img {
   transform: scale(1.1);
-}
-
-.event-card .btn {
-  width: 100%;
-  border-radius: .5rem;
-  color: var(--white-color);
-  padding: .75rem 1.5rem;
-}
-
-.event-card .btn.bg-secondary {
-  border-color: var(--secondary-color);
-}
-
-.event-card .btn.outline {
-  border-color: var(--secondary-color);
-}
-
-.event-card .btn.bg-secondary:hover {
-  border-color: rgb(from var(--secondary-color)r g b / 80%);
-  background-color: rgb(from var(--secondary-color)r g b / 80%);
-}
-
-.event-card .btn.outline:hover {
-  background-color: var(--secondary-color);
 }
 </style>
