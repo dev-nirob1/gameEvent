@@ -12,7 +12,6 @@ const withdrawalHistory = [
 
 <template>
   <BreadCrumb />
-
   <section class="withdraw-history bg-light">
 
     <div class="container">
@@ -59,6 +58,11 @@ const withdrawalHistory = [
 
 <style scoped>
 .withdraw-history {
-  padding: 3.5rem 0;
+  padding: 4.5rem 0 3.75rem 0;
+}
+@media (min-width: 768px){
+  .withdraw-history {
+    padding: 3rem 0 3.75rem 0;
+  }
 }
 </style>

@@ -50,7 +50,7 @@ ul {
 }
 
 .mobile-breadcrumb {
-  padding: 1rem;
+  padding: .75rem;
   display: flex;
   align-items: center;
   gap: 1rem;

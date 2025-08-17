@@ -77,14 +77,14 @@ watchEffect(() => {
   position: fixed;
   top: 0;
   left: 0;
-  padding: .25rem 0;
+  padding: .5rem 0;
   width: 100%;
   z-index: 999;
 }
 
 .navbar .profile {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .navbar .profile img {
@@ -96,7 +96,7 @@ watchEffect(() => {
 
 /* Logo Styles */
 .logo {
-  height: 2rem;
+  height: 2.5rem;
   width: auto;
 }
 
@@ -124,7 +124,6 @@ watchEffect(() => {
 @media (min-width: 768px) {
   .navbar {
     display: block;
-    padding: .5rem 0;
   }
 
   .navbar .logo {
