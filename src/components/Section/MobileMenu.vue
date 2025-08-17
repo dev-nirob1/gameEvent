@@ -21,7 +21,7 @@
     <li>
       <RouterLink to="/my-event">
         <i class="fa-solid fa-trophy"></i>
-        <span>My Event</span>
+        <span>Event</span>
       </RouterLink>
     </li>
   </ul>

@@ -27,39 +27,11 @@
   color: var(--secondary-color)
 }
 
-/* buttons styles  */
-.hero .btn {
-  color: var(--white-color);
-  border-radius: .5rem;
-  padding: .75rem 1rem;
-}
-
-.hero .btn.outline {
-  border-color: var(--secondary-color);
-  color: var(--white-color);
-}
-
-.hero .btn.outline:hover {
-  background: rgb(from var(--primary-color) r g b / 30%);
-  transform: translateY(-.25rem);
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
-}
-
-.hero .btn.bg-secondary {
-  border-color: var(--secondary-color);
-}
-
-.hero .btn.btn.bg-secondary:hover {
-  transform: translateY(-.25rem);
-  border-color: var(--alternative-color);
-  background-color: var(--alternative-color);
-}
-
 @media (min-width: 768px) {
   .hero {
-  min-height: 100vh;
+    min-height: 100vh;
   }
+
   .hero .content {
     max-width: 80%;
   }

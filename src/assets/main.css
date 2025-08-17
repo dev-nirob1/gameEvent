@@ -179,7 +179,7 @@ a {
 .btn.outline{
   border-color: var(--secondary-color);
 }
-.event-card .btn.outline:hover {
+.btn.outline:hover {
   background-color: var(--secondary-color);
 }
 /* table styles  */
