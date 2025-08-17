@@ -30,14 +30,25 @@ const route = useRoute()
 </template>
 
 <style scoped>
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: 99;
+}
+
 .breadcrumb {
   display: none;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .mobile-breadcrumb {
   padding: 1rem;
   display: flex;
@@ -46,13 +57,16 @@ ul {
 }
 
 .mobile-breadcrumb .btn {
-  color: var(--white-color);
   padding: .25rem;
   border: none;
   margin: 0;
 }
 
 @media (min-width: 768px) {
+  section {
+    position: static;
+  }
+
   .mobile-breadcrumb {
     display: none;
   }
@@ -71,7 +85,6 @@ ul {
 
   .breadcrumb ul li a {
     position: relative;
-    color: var(--primary-light-color);
     text-decoration: none;
     padding-bottom: .5rem;
   }
