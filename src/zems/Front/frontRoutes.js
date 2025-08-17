@@ -3,7 +3,8 @@ import ContactPage from "./Pages/ContactPage.vue";
 import EventDetails from "./Pages/EventDetails.vue";
 import EventsPage from "./Pages/EventsPage.vue";
 import HomePage from "./Pages/HomePage.vue";
-import ActivityPage from "./Pages/ActivityPage.vue";
+import MyEventPage from "./Pages/MyEventPage.vue";
+import WithdrawHistory from "./Pages/WithdrawHistory.vue";
 
 export default [
   {
@@ -31,9 +32,14 @@ export default [
           component: ContactPage
         },
         {
-          path: "/activity",
-          name: "activity",
-          component: ActivityPage
+          path: "/withdraw-history",
+          name: "withdraw-history",
+          component: WithdrawHistory
+        },
+        {
+          path: "/my-event",
+          name: "my-event",
+          component: MyEventPage
         },
     ]
   }

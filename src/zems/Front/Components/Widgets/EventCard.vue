@@ -15,11 +15,11 @@ defineProps({
       <BaseImage :image="event.image" alt="project image" />
     </div>
     <div class="p-1">
-      <BaseParagraph class="price-badge">Fee: 5$</BaseParagraph>
+      <BaseParagraph class="price-badge">Fee: {{event.fee}}</BaseParagraph>
 
       <div class="flex justify-between">
-        <BaseParagraph>Starts: 15-aug 2025</BaseParagraph>
-        <BaseParagraph>Prize: <strong>60</strong>$</BaseParagraph>
+        <BaseParagraph>Starts: {{event.startDate}}</BaseParagraph>
+        <BaseParagraph>Prize: <strong>{{ event.prize }}</strong>$</BaseParagraph>
       </div>
 
       <SubTitle>{{ event.name }}</SubTitle>

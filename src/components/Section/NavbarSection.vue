@@ -48,10 +48,10 @@ watchEffect(() => {
           <RouterLink to="/events">Events</RouterLink>
         </ListItem>
         <ListItem>
-          <RouterLink to="/contact-us">Contact Us</RouterLink>
+          <RouterLink to="/withdraw-history">History</RouterLink>
         </ListItem>
         <ListItem>
-          <RouterLink to="/activity">Activity</RouterLink>
+          <RouterLink to="/my-event">My Event</RouterLink>
         </ListItem>
       </ul>
     </nav>
@@ -84,8 +84,8 @@ watchEffect(() => {
 }
 
 .navbar .profile {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .navbar .profile img {
@@ -102,8 +102,11 @@ watchEffect(() => {
   gap: 0.5rem;
   padding: 0;
   text-decoration: none;
+  color: var(--white-color) !important;
 }
-
+.logo .title {
+  font-size: 1.25rem
+}
 .logo p {
   margin: 0;
   padding: 0;
@@ -135,9 +138,11 @@ watchEffect(() => {
   .navbar .profile {
     display: none;
   }
-.navbar {
-  display:block;
-}
+
+  .navbar {
+    display: block;
+  }
+
   .navbar ul {
     list-style: none;
     position: inherit;
@@ -164,6 +169,10 @@ watchEffect(() => {
 
   .navbar ul li a:hover::after {
     width: 100%;
+  }
+
+  .navbar .router-link-exact-active {
+    color: var(--secondary-color);
   }
 }
 </style>

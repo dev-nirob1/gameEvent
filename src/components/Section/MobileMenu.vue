@@ -13,15 +13,15 @@
       </RouterLink>
     </li>
     <li>
-      <RouterLink to="/contact-us">
+      <RouterLink to="/withdraw-history">
         <i class="fa-solid fa-envelope"></i>
-        <span>Contact</span>
+        <span>History</span>
       </RouterLink>
     </li>
     <li>
-      <RouterLink to="/activity">
+      <RouterLink to="/my-event">
         <i class="fa-solid fa-trophy"></i>
-        <span>Activity</span>
+        <span>My Event</span>
       </RouterLink>
     </li>
   </ul>
@@ -37,15 +37,14 @@
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background: var(--alternative-color);
   color: var(--white-color);
-  z-index: 1000;
+  z-index: 999;
 }
 
 .mobile-nav-links li {
-  /* flex: 1; */
+  flex: 1;
   text-align: center;
 }
 
@@ -53,15 +52,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 1rem;
   color: var(--white-color);
   font-size: 14px;
   text-decoration: none;
 }
 
-.mobile-nav-links i {
-  font-size: 18px;
-  margin-bottom: 4px;
+.mobile-nav-links .router-link-exact-active{
+  color: var(--secondary-color) !important;
 }
 
 /* Hide on desktop */
