@@ -67,6 +67,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@zems': fileURLToPath(new URL('./src/zems', import.meta.url))
     },
   },
 })

@@ -1,10 +1,10 @@
 <script setup>
-import EventSection from '../Components/Section/EventSection.vue';
-import FaqSection from '../Components/Section/FaqSection.vue';
-import HeroSection from '../Components/Section/HeroSection.vue';
-import HowToPlay from '../Components/Section/HowToPlay.vue';
-import TestimonialSection from '../Components/Section/TestimonialSection.vue';
-import VideoSection from '../Components/Section/VideoSection.vue';
+import EventSection from '@zems/Front/Components/Section/EventSection.vue';
+import FaqSection from '@zems/Front/Components/Section/FaqSection.vue';
+import HeroSection from '@zems/Front/Components/Section/HeroSection.vue';
+import HowToPlay from '@zems/Front/Components/Section/HowToPlay.vue';
+import TestimonialSection from '@zems/Front/Components/Section/TestimonialSection.vue';
+import VideoSection from '@zems/Front/Components/Section/VideoSection.vue';
 
 </script>
 
