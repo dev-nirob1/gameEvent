@@ -1,5 +1,5 @@
 <script setup>
-import EventBanner from '../Components/Section/EventBanner.vue';
+import EventBanner from '@zems/Front/Components/Section/EventBanner.vue';
 
 const event = {
   name: 'Ludo Battle Royale',

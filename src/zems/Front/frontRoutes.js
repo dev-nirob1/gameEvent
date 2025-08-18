@@ -1,10 +1,9 @@
 import FrontLayout from "./Layout/FrontLayout.vue";
-import ContactPage from "./Pages/ContactPage.vue";
-import EventDetails from "./Pages/EventDetails.vue";
-import EventsPage from "./Pages/EventsPage.vue";
-import HomePage from "./Pages/HomePage.vue";
-import MyEventPage from "./Pages/MyEventPage.vue";
-import WithdrawHistory from "./Pages/WithdrawHistory.vue";
+import EventDetails from "@zems/Front/Pages/EventDetails.vue";
+import EventsPage from "@zems/Front/Pages/EventsPage.vue";
+import HomePage from "@zems/Front/Pages/HomePage.vue";
+import MyEventPage from "@zems/Front/Pages/MyEventPage.vue";
+import WithdrawHistory from "@zems/Front/Pages/WithdrawHistory.vue";
 
 export default [
   {
@@ -25,11 +24,6 @@ export default [
           path: "/events-details/:slug",
           name: "events-details",
           component: EventDetails
-        },
-        {
-          path: "/contact-us",
-          name: "contact-us",
-          component: ContactPage
         },
         {
           path: "/withdraw-history",

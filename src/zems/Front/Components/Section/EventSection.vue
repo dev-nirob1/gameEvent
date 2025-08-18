@@ -1,6 +1,6 @@
 <script setup>
 import SectionTitle from '@/components/Widgets/SectionTitle.vue';
-import EventCard from '../Widgets/EventCard.vue';
+import EventCard from '@zems/Front/Components/Widgets/EventCard.vue';
 
 const events = [
   {

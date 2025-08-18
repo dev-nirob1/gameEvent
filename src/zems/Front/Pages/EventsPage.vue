@@ -1,7 +1,7 @@
 <script setup>
 import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
 import SectionTitle from '@/components/Widgets/SectionTitle.vue';
-import EventCard from '../Components/Widgets/EventCard.vue';
+import EventCard from '@zems/Front/Components/Widgets/EventCard.vue';
 
 const events = [
   {

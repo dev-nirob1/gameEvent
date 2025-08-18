@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import AccordionFaq from '../Widgets/AccordionFaq.vue';
+import AccordionFaq from '@zems/Front/Components/Widgets/AccordionFaq.vue';
 
 const faqs = ref([
   {

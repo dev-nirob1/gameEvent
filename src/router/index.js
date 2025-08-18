@@ -1,4 +1,4 @@
-import frontRoutes from '@/zems/Front/frontRoutes';
+import frontRoutes from '@zems/Front/frontRoutes';
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({

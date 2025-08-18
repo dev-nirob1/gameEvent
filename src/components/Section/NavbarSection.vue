@@ -19,7 +19,6 @@ const routeName = ref(route.name)
 
 watchEffect(() => {
   routeName.value = route.name
-  console.log(routeName);
 })
 
 </script>

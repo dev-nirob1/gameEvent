@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue';
-import TestimonialCard from '../Widgets/TestimonialCard.vue';
+import TestimonialCard from '@zems/Front/Components/Widgets/TestimonialCard.vue';
 
 const testimonials = ref([
   {

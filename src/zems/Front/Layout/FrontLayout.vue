@@ -8,14 +8,14 @@ import { RouterView } from 'vue-router';
 
 <template>
   <NavbarSection />
-  <MobileMenu/>
+  <MobileMenu />
   <main>
     <RouterView />
   </main>
   <FooterSection />
 </template>
 <style scoped>
-main{
+main {
   padding-bottom: 3rem;
 }
 </style>
