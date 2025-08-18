@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue';
 import TestimonialCard from '@zems/Front/Components/Widgets/TestimonialCard.vue';
+import SectionTitle from '@/components/Widgets/SectionTitle.vue';
 
 const testimonials = ref([
   {
@@ -49,7 +50,7 @@ const activeReview = computed(() => {
 <template>
   <section class="testimonials bg-light">
     <div class="container relative">
-      <BaseTitle class="text-center mb-3">Gamers Feedback</BaseTitle>
+      <SectionTitle class="text-center mb-3">Gamers Feedback</SectionTitle>
 
       <!-- testimonials card  -->
       <div>

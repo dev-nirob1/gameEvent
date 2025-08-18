@@ -38,6 +38,7 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: .5rem;
 }
 .accordion-body {
   padding: 0;
