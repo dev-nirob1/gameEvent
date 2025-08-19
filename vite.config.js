@@ -55,8 +55,27 @@ export default defineConfig({
             form_factor: 'wide'
           },
           {
+            src: '/tablet.png',
+            sizes: '768x894',
+            type: 'image/png',
+            label: 'Ludo clash gameplay',
+            form_factor: 'wide'
+          },
+          {
+            src: '/medium-mobile.png',
+            sizes: '425x596',
+            type: 'image/png',
+            label: 'Ludo clash mobile view',
+          },
+          {
             src: '/mobile.png',
-            sizes: '750x1334',
+            sizes: '375x596',
+            type: 'image/png',
+            label: 'Ludo clash mobile view',
+          },
+          {
+            src: '/small-mobile.png',
+            sizes: '320x667',
             type: 'image/png',
             label: 'Ludo clash mobile view',
           },
