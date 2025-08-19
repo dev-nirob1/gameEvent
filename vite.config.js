@@ -23,7 +23,7 @@ export default defineConfig({
         theme_color: '#3b82f6',
         background_color: '#0C0C1D',
         display: 'standalone',
-        orientation: 'landscape',
+        orientation: 'portrait',
         display_override: ['window-controls-overlay', 'standalone'],
         start_url: '/',
         icons: [
