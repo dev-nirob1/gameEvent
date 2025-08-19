@@ -31,62 +31,65 @@ export default defineConfig({
             src: '/mobile-logo-1.png',
             sizes: '144x144',
             type: 'image/png',
-            purpose: 'any'
+            purpose: 'any',
           },
           {
             src: '/mobile-log.png',
             sizes: '192x192',
             type: 'image/png',
-            purpose: 'any'
+            purpose: 'any',
           },
           {
             src: '/logo.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any'
+            purpose: 'any',
           },
         ],
-        screenshots:[
-          {
-            src: '/desktop.png',
-            sizes: '2560x1440',
-            type: 'image/png',
-            label: 'Ludo clash gameplay',
-            form_factor: 'wide'
-          },
-          {
-            src: '/tablet.png',
-            sizes: '768x894',
-            type: 'image/png',
-            label: 'Ludo clash gameplay',
-            form_factor: 'wide'
-          },
-          {
-            src: '/medium-mobile.png',
-            sizes: '425x596',
-            type: 'image/png',
-            label: 'Ludo clash mobile view',
-          },
+        screenshots: [
           {
             src: '/mobile.png',
             sizes: '375x596',
             type: 'image/png',
             label: 'Ludo clash mobile view',
+            form_factor: 'narrow',
           },
           {
             src: '/small-mobile.png',
             sizes: '320x667',
             type: 'image/png',
             label: 'Ludo clash mobile view',
+            form_factor: 'narrow',
           },
-        ]
+          {
+            src: '/medium-mobile.png',
+            sizes: '425x596',
+            type: 'image/png',
+            label: 'Ludo clash mobile view',
+            form_factor: 'narrow',
+          },
+          {
+            src: '/tablet.png',
+            sizes: '768x894',
+            type: 'image/png',
+            label: 'Ludo clash gameplay',
+            form_factor: 'wide',
+          },
+          {
+            src: '/desktop.png',
+            sizes: '2560x1440',
+            type: 'image/png',
+            label: 'Ludo clash gameplay',
+            form_factor: 'wide',
+          },
+        ],
       },
     }),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@zems': fileURLToPath(new URL('./src/zems', import.meta.url))
+      '@zems': fileURLToPath(new URL('./src/zems', import.meta.url)),
     },
   },
 })
