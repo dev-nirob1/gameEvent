@@ -1,11 +1,23 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
+const registrationInfo = ref({
+  name: '',
+  email: '',
+  phone: '',
+  password: '',
+  confirm_password: ''
+})
+
+const handleRegistration = () => {
+  console.log(registrationInfo);
+}
 </script>
 
 <template>
   <div class="register">
-    <form class="form">
+    <form @submit.prevent="handleRegistration" class="form">
       <!-- Logo -->
       <div class="logo">
         <BaseImage image="/logo.png" alt="Logo" />
@@ -13,23 +25,21 @@ import { RouterLink } from 'vue-router';
       <h4 class="my-1">Create Account</h4>
 
       <div>
-        <InputField type="text" id="name" placeholder="Enter your full name" required />
+        <InputField v-model="registrationInfo.name" type="text" id="name" placeholder="Enter your full name" required />
+      </div>
+      <div>
+        <InputField v-model="registrationInfo.email" type="email" id="email" placeholder="Enter your email" required />
+      </div>
+      <div>
+        <InputField v-model="registrationInfo.phone" type="tel" id="phone" placeholder="Enter your phone number" required />
       </div>
 
       <div>
-        <InputField type="email" id="email" placeholder="Enter your email" required />
+        <InputField v-model="registrationInfo.password" type="password" id="password" placeholder="Create a password" required />
       </div>
 
       <div>
-        <InputField type="tel" id="phone" placeholder="Enter your phone number" required />
-      </div>
-
-      <div>
-        <InputField type="password" id="password" placeholder="Create a password" required />
-      </div>
-
-      <div>
-        <InputField type="password" id="confirm-password" placeholder="Re-enter password" required />
+        <InputField v-model="registrationInfo.confirm_password" type="password" id="confirm-password" placeholder="Re-enter password" required />
       </div>
 
       <BaseButton type="submit" class="width-full bg-secondary">Register</BaseButton>
