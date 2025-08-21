@@ -1,28 +1,42 @@
+<script setup>
+import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+
+const loginInfo = ref({
+  email: '',
+  password: '',
+})
+
+const handleLogin = () => {
+  console.log(loginInfo);
+}
+
+</script>
+
 <template>
   <div class="login">
-    <form class="form">
+    <form @submit.prevent="handleLogin" class="form">
       <!-- Logo -->
       <div class="logo">
         <BaseImage image="/logo.png" alt="Logo" />
       </div>
       <h4 class="my-1">Login</h4>
 
-
-
       <div>
-        <InputField type="email" id="email" placeholder="Enter your email" required />
+        <InputField v-model="loginInfo.email" type="email" id="email" placeholder="Enter your email" required />
       </div>
       <div>
-        <InputField type="password" id="password" placeholder="Create a password" required />
+        <InputField v-model="loginInfo.password" type="password" id="password" placeholder="Create a password"
+          required />
       </div>
 
       <BaseButton type="submit" class="width-full bg-secondary">Login</BaseButton>
 
       <div class="links">
-        <a href="/forgot-password">Forgot Password?</a>
+        <RouterLink to="">Forgot Password?</RouterLink>
         <p>
           Don’t have an account?
-          <a href="/register">Register</a>
+          <RouterLink to="/register">Register</RouterLink>
         </p>
       </div>
     </form>
