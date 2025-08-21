@@ -19,9 +19,9 @@ const handleRegistration = () => {
   <div class="register">
     <form @submit.prevent="handleRegistration" class="form">
       <!-- Logo -->
-      <div class="logo">
+      <RouterLink to="/" class="logo">
         <BaseImage image="/logo.png" alt="Logo" />
-      </div>
+      </RouterLink>
       <h4 class="my-1">Create Account</h4>
 
       <div>

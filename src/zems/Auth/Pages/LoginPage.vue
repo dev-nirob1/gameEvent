@@ -17,9 +17,9 @@ const handleLogin = () => {
   <div class="login">
     <form @submit.prevent="handleLogin" class="form">
       <!-- Logo -->
-      <div class="logo">
+      <RouterLink to="/" class="logo">
         <BaseImage image="/logo.png" alt="Logo" />
-      </div>
+      </RouterLink>
       <h4 class="my-1">Login</h4>
 
       <div>
