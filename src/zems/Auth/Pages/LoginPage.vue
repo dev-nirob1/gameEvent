@@ -1,25 +1,22 @@
 <template>
-  <div class="login-container">
+  <div class="login">
+    <form class="form">
+      <!-- Logo -->
+      <div class="logo">
+        <BaseImage image="/logo.png" alt="Logo" />
+      </div>
+      <h4 class="my-1">Login</h4>
 
-    <!-- Login Form -->
-    <form class="login-form">
-          <!-- Logo -->
-    <div class="logo">
-      <img src="/logo.png" alt="Logo" />
-    </div>
-      <h2>Login</h2>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required />
+
+      <div>
+        <InputField type="email" id="email" placeholder="Enter your email" required />
+      </div>
+      <div>
+        <InputField type="password" id="password" placeholder="Create a password" required />
       </div>
 
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required />
-      </div>
-
-      <button type="submit" class="login-btn">Login</button>
+      <BaseButton type="submit" class="width-full bg-secondary">Login</BaseButton>
 
       <div class="links">
         <a href="/forgot-password">Forgot Password?</a>
@@ -33,98 +30,55 @@
 </template>
 
 <style scoped>
-
-.login-container {
+.login {
   min-height: 100vh;
-  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-}
-
-.logo {
+  color: var(--primary-color);
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 .logo img {
-  width: 80px;
-  height: auto;
+  height: 80px;
+  width: auto;
 }
 
-.login-form {
-  background: var(--white-color); /* White card */
+.form {
+  background: var(--white-color);
   padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: .75rem;
   width: 100%;
-  max-width: 400px;
-  color: var(--primary-color); /* Text dark for contrast */
+  max-width: 450px;
 }
 
-.login-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
-  color: var(--primary-color);
-}
-
-.form-group input {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid var(--border-color);
+.form input {
+  border: 1px solid rgb(from var(--primary-color)r g b / 10%);
   border-radius: 0.5rem;
   background: #fff;
-  color: var(--primary-color);
-  font-size: 1rem;
 }
 
-.form-group input:focus {
+.form input:focus {
   outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 5px var(--secondary-color);
+  border-color: var(--primary-color);
 }
 
-.login-btn {
-  width: 100%;
-  padding: 0.8rem;
-  margin-top: 0.5rem;
-  background: var(--secondary-color);
+.login .btn {
+  border-radius: .5rem;
   border: none;
-  border-radius: 0.5rem;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.login-btn:hover {
-  background: #2563eb;
 }
 
 .links {
   margin-top: 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: var(--primary-color);
 }
 
 .links a {
   color: var(--secondary-color);
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .links a:hover {

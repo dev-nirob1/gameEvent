@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink } from 'vue-router';
 
 </script>
@@ -56,7 +56,6 @@ import { RouterLink } from 'vue-router';
   text-align: center;
 }
 
-
 .logo img {
   height: 80px;
   width: auto;
@@ -83,6 +82,7 @@ import { RouterLink } from 'vue-router';
 
 .register .btn {
   border-radius: .5rem;
+  border:none;
 }
 
 .links {
