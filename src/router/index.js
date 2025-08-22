@@ -1,3 +1,4 @@
+import admin_routes from '@/zems/Admin/admin_routes';
 import auth_routes from '@/zems/Auth/auth_routes';
 import user_routes from '@/zems/User/user_routes';
 import frontRoutes from '@zems/Front/frontRoutes';
@@ -8,6 +9,7 @@ const router = createRouter({
   routes: [
     ...frontRoutes,
     ...user_routes,
+    ...admin_routes,
     ...auth_routes
   ]
 })
