@@ -1,53 +1,8 @@
-<template>
-  Update
-
-  <div>
-    <input type="hidden" v-model="update.id" id="" />
-    <label for="">Title</label>
-    <input type="text" v-model="update.title" />
-  </div>
-  <div>
-    <label for="">Description</label>
-    <input type="text" v-model="update.description" />
-  </div>
-  <div>
-    <label for="">Image</label>
-    <input type="text" v-model="update.image" />
-  </div>
-  <div>
-    <label for="">Amount</label>
-    <input type="text" v-model="update.amount" />
-  </div>
-  <div>
-    <label for="">Winning Amount</label>
-    <input type="text" v-model="update.winning_amount" />
-  </div>
-
-  <div>
-    <label for="">Started Time</label>
-    <input type="date" v-model="update.started_time" />
-  </div>
-  <div>
-    <label for="">Status </label>
-    <input type="text" v-model="update.status" />
-  </div>
-
-  <div>
-    <label for="">Category</label>
-    <!-- {{ categories }} -->
-    <select v-model="update.cat_id">
-      <option value="">Select</option>
-      <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.cat_name }}</option>
-    </select>
-  </div>
-
-  <button @click="insert">Submit</button>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
+import SectionTitle from '@/components/Widgets/SectionTitle.vue'
 
 const update = ref({})
 const categories = ref()
@@ -85,3 +40,67 @@ axios
     categories.value = res.data
   })
 </script>
+
+<template>
+  <section class="update-event bg-light">
+    <div class="container">
+      <SectionTitle class="text-center mb-2">Update Event</SectionTitle>
+      <div>
+        <label for="">Title</label>
+        <InputField type="text" v-model="update.title" />
+      </div>
+      <div>
+        <label for="">Description</label>
+        <InputField type="text" v-model="update.description" />
+      </div>
+      <div>
+        <label for="">Image</label>
+        <InputField type="text" v-model="update.image" />
+      </div>
+      <div>
+        <label for="">Amount</label>
+        <InputField type="number" v-model="update.amount" />
+      </div>
+      <div>
+        <label for="">Amount</label>
+        <InputField type="number" v-model="update.winning_amount" />
+      </div>
+      <div>
+        <label for="">Started Time</label>
+        <InputField type="number" v-model="update.started_time" />
+      </div>
+      <div>
+        <label for="">Status</label>
+        <InputField type="number" v-model="update.status" />
+      </div>
+      <div>
+        <label for="">Category</label>
+        <!-- {{ categories }} -->
+        <select v-model="update.cat_id">
+          <option value="" disabled>-- Select a category --</option>
+          <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.cat_name }}</option>
+        </select>
+      </div>
+      <BaseButton class="bg-secondary" @click="insert">Update</BaseButton>
+    </div>
+  </section>
+
+</template>
+
+<style scoped>
+.update-event {
+  padding: 3.75rem 0;
+}
+
+.update-event input {
+  background-color: var(--white-color);
+  border-radius: .5rem;
+  border-color: rgb(from var(--secondary-color) r g b / 50%);
+}
+
+.update-event select {
+  background: var(--white-color);
+  border-radius: .5rem;
+  border: 2px solid rgb(from var(--secondary-color) r g b / 50%);
+}
+</style>
