@@ -30,30 +30,34 @@ const insert = () => {
       <BaseTitle class="mb-1">Deposit</BaseTitle>
 
       <div>
-        <label for="">Amount</label>
+        <BaseParagraph>Amount</BaseParagraph>
         <InputField type="number" v-model="create.amount" placeholder="Enter Amount" />
       </div>
 
       <div>
         <BaseParagraph>Payment Method </BaseParagraph>
-        <div class="radio-option" @click="create.payment_method = 'Nogod'">
+        <label class="flex align-center justify-between">
           <div class="flex align-center">
             <BaseImage image="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png" alt="nogod-logo" />
-            <label>Nogod</label>
+            <span>Nogod</span>
           </div>
           <InputField type="radio" v-model="create.payment_method" value="Nogod" />
-        </div>
+        </label>
 
-        <div class="radio-option" @click="create.payment_method = 'Bkash'">
+        <label class="flex align-center justify-between">
           <div class="flex align-center">
             <BaseImage image="https://www.logo.wine/a/logo/BKash/BKash-Icon2-Logo.wine.svg" alt="bkash-logo" />
-            <label>Bkash</label>
+            <span>Bkash</span>
           </div>
           <InputField type="radio" v-model="create.payment_method" value="Bkash" />
-        </div>
+        </label>
+
       </div>
 
-      <BaseButton class="width-full" @click="insert">Submit</BaseButton>
+      <div class="flex gap-1">
+        <BaseButton>Cancel</BaseButton>
+        <BaseButton @click="insert">Submit</BaseButton>
+      </div>
     </div>
   </section>
 </template>
@@ -80,22 +84,26 @@ const insert = () => {
   outline: none;
 }
 
-.deposit-form .radio-option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.deposit-form input[type="radio"] {
+  width: fit-content;
+}
+.deposit-form input[type="number"] {
+  margin:0 0 .25rem 0;
+}
+
+.deposit-form label {
   padding: .25rem .5rem;
-  margin-bottom: 1rem;
   border: 2px solid var(--white-color);
+  margin-bottom: 1rem;
   border-radius: .5rem;
 }
 
-.radio-option img {
-  height: 3rem;
-  width: 4rem;
+.deposit-form p {
+  margin: .75rem 0;
 }
 
-.deposit-form .radio-option input {
-  width: fit-content;
+.deposit-form img {
+  height: 3rem;
+  width: 4rem;
 }
 </style>
