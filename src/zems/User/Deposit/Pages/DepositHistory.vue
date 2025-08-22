@@ -1,5 +1,5 @@
 <script setup>
-import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
+// import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
 import SectionTitle from '@/components/Widgets/SectionTitle.vue';
 
 const deposit_history = [
@@ -11,7 +11,7 @@ const deposit_history = [
 
 
 <template>
-  <BreadCrumb />
+  <!-- <BreadCrumb /> -->
   <section class="deposit-history bg-light">
 
     <div class="container">
