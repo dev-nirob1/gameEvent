@@ -16,11 +16,14 @@ import AdminSidebar from '../Components/AdminSidebar.vue';
 </template>
 
 <style scoped>
-.admin-routes {
+
+@media (min-width: 768px){
+  .admin-routes {
   display: flex;
   gap: 1rem;
 }
 .router-view {
   flex: 1;
+}
 }
 </style>

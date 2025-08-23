@@ -62,12 +62,12 @@ axios
         <InputField type="number" v-model="update.amount" />
       </div>
       <div>
-        <label for="">Amount</label>
+        <label for="">Winning Amount</label>
         <InputField type="number" v-model="update.winning_amount" />
       </div>
       <div>
         <label for="">Started Time</label>
-        <InputField type="number" v-model="update.started_time" />
+        <InputField type="date" v-model="update.started_time" />
       </div>
       <div>
         <label for="">Status</label>

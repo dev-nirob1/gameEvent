@@ -23,7 +23,7 @@ axios
 
     withdrawals.value = res.data
   })
-  
+
 </script>
 <template>
   <section class="withdrawal bg-light">
@@ -31,12 +31,12 @@ axios
       <!-- withdraw history -->
       <div class="table">
         <div class="table-header">
-          <div>ID</div>
+          <div class="sl">ID</div>
           <div>Amount</div>
           <div>Payer Account</div>
           <div>Payment Method</div>
-          <div>trxID</div>
-          <div>Payment ID</div>
+          <!-- <div>trxID</div> -->
+          <!-- <div>Payment ID</div> -->
           <div>Status</div>
           <div>Type</div>
           <div>Company ID</div>
@@ -67,15 +67,15 @@ axios
             {{ withdrawal.payment_method }}
           </div>
 
-          <div>
+          <!-- <div>
             <div class="medium-none">trxID</div>
             {{ withdrawal.trxID }}
-          </div>
+          </div> -->
 
-          <div>
+          <!-- <div>
             <div class="medium-none">Payment ID</div>
             {{ withdrawal.paymentID }}
-          </div>
+          </div> -->
 
           <div>
             <div class="medium-none">Status</div>
