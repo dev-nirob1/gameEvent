@@ -31,8 +31,8 @@ axios
   })
 </script>
 <template>
-  <section class="create-event">
-    <div class="container">
+  <section class="create-event bg-light">
+    <div class="container px-2">
       <SectionTitle class="text-center mb-2">Create Event</SectionTitle>
       <div>
         <label for="">Title</label>

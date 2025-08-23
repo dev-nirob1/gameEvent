@@ -26,7 +26,7 @@ import { RouterLink } from "vue-router";
   max-width: 350px;
   height: 100vh;
   padding: 1.5rem;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
 }
@@ -45,7 +45,7 @@ import { RouterLink } from "vue-router";
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .nav-link {

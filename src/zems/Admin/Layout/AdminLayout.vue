@@ -5,13 +5,22 @@ import AdminSidebar from '../Components/AdminSidebar.vue';
 </script>
 
 <template>
-
-    <div class=" medium-5">
-      <div class="medium-span-1">
+    <div class="admin-routes">
+      <div>
         <AdminSidebar/>
       </div>
-      <div class="medium-span-4">
+      <div class="router-view">
         <RouterView/>
       </div>
     </div>
 </template>
+
+<style scoped>
+.admin-routes {
+  display: flex;
+  gap: 1rem;
+}
+.router-view {
+  flex: 1;
+}
+</style>

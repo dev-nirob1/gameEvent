@@ -27,7 +27,7 @@ axios
 </script>
 <template>
   <section class="withdrawal bg-light">
-    <div class="container">
+    <div class="container px-2">
       <SectionTitle class="text-center mb-2">
         Withdraw History
       </SectionTitle>
