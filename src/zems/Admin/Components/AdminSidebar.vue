@@ -1,39 +1,45 @@
-<template>
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <h2>Admin Panel</h2>
-    </div>
-    <nav class="sidebar-nav">
-      <RouterLink to="/admin/events/all" class="nav-link">📅 All Events</RouterLink>
-      <RouterLink to="/admin/event/create" class="nav-link">➕ Create Event</RouterLink>
-      <RouterLink to="/admin/withdrawal" class="nav-link">💳 Withdrawals</RouterLink>
-    </nav>
-  </aside>
-</template>
-
 <script setup>
 import { RouterLink } from "vue-router";
 </script>
 
+<template>
+  <aside class="sidebar bg-light">
+    <RouterLink to="/" class="logo">
+      <BaseImage image="/logo.png" alt="logo" />
+    </RouterLink>
+    <nav class="sidebar-nav">
+      <RouterLink to="/admin/events/all" class="nav-link">
+        <i class="fa-solid fa-calendar-alt "></i> All Events
+      </RouterLink>
+      <RouterLink to="/admin/event/create" class="nav-link">
+        <i class="fa-solid fa-plus"></i> Create Event
+      </RouterLink>
+      <RouterLink to="/admin/withdrawal" class="nav-link">
+        <i class="fas fa-credit-card"></i> Withdrawals
+      </RouterLink>
+    </nav>
+  </aside>
+</template>
+
 <style scoped>
 .sidebar {
-  width: 240px;
+  max-width: 350px;
   height: 100vh;
-  background: linear-gradient(180deg, #1e293b, #0f172a);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  padding: 1.5rem;
   position: fixed;
   left: 0;
   top: 0;
 }
 
-.sidebar-header {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+.logo {
+  display: block;
+  margin: 1rem 0;
   text-align: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
 }
 
 .sidebar-nav {
@@ -43,21 +49,16 @@ import { RouterLink } from "vue-router";
 }
 
 .nav-link {
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #cbd5e1;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  color: var(--white-color);
   text-decoration: none;
   transition: 0.3s;
   font-weight: 500;
 }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
 .router-link-active {
-  background: #2563eb;
-  color: white !important;
+  background: var(--secondary-color);
+  color: var(--white-color) !important;
 }
 </style>

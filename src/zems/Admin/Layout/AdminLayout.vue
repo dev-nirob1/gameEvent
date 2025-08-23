@@ -6,7 +6,7 @@ import AdminSidebar from '../Components/AdminSidebar.vue';
 
 <template>
 
-    <div class="medium-5">
+    <div class=" medium-5">
       <div class="medium-span-1">
         <AdminSidebar/>
       </div>
