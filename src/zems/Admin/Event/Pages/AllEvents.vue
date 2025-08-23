@@ -1,5 +1,4 @@
 <script setup>
-import SectionTitle from '@/components/Widgets/SectionTitle.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -25,13 +24,10 @@ axios
     events.value = res.data
   })
 </script>
+
 <template>
   <section class="events bg-light">
-  <div class="container px-2">
-      <SectionTitle class="text-center mb-2">
-        All Events
-      </SectionTitle>
-      <!-- my events  -->
+    <div class="container">
       <div class="table">
         <div class="table-header">
           <div class="sl">SL</div>
@@ -86,35 +82,21 @@ axios
           <div>
             <div class="medium-none">Actions</div>
             <!-- {{ data.status }} -->
-              <div class="flex gap-1">
-                <BaseButton @click="deleted">Delete</BaseButton>
-              <RouterLink class="btn" :to="`/event/update/${data.id}`" >Edit</RouterLink>
-              </div>
+            <div class="flex align-center gap-1">
+              <BaseButton @click="deleted" class="bg-danger"><i class="fa-solid fa-trash"></i></BaseButton>
+              <RouterLink class="btn bg-warning" :to="`/admin/event/update/${data.id}`">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </RouterLink>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
-  <!-- <div v-for="event in events" :key="event.id">
-    <div>{{ event.id }}</div>
-    <div>{{ event.title }}</div>
-    <div>{{ event.description }}</div>
-    <div>{{ event.image }}</div>
-    <div>{{ event.amount }}</div>
-    <div>{{ event.winning_amount }}</div>
-    <div>{{ event.started_time }}</div>
-    <div>{{ event.status }}</div>
-    <div>{{ event.cat_id }}</div>
-
-    <div>
-      <button @click="deleted(event.id)">Delete</button>
-    </div>
-  </div> -->
 </template>
 <style scoped>
 .events {
-  padding: 3.75rem 0;
+  padding: 2rem;
 }
 </style>

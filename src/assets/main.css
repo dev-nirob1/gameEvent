@@ -13,6 +13,8 @@ html {
   --primary-color: #0c0c1d;
   --secondary-color: #3b82f6;
   --alternative-color: #1e3a8a;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
   --white-color: #edf0f9;
   --border-color: #334155;
   /* ---------------typography------------ */
@@ -104,6 +106,12 @@ a {
 .bg-secondary {
   background-color: var(--secondary-color);
 }
+.bg-danger {
+  background-color: var(--danger-color);
+}
+.bg-warning {
+  background-color: var(--warning-color);
+}
 
 .text-center {
   text-align: center;
@@ -186,7 +194,13 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
+.table-row .btn {
+  border: none;
+}
+.table-row a{
+  color: var(--primary-color);
+  padding: .5rem .75rem;
+}
 @media (min-width: 576px) {
   :root {
     --heading-1: 2rem;

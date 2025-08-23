@@ -1,5 +1,4 @@
 <script setup>
-import SectionTitle from '@/components/Widgets/SectionTitle.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -27,11 +26,7 @@ axios
 </script>
 <template>
   <section class="withdrawal bg-light">
-    <div class="container px-2">
-      <SectionTitle class="text-center mb-2">
-        Withdraw History
-      </SectionTitle>
-
+    <div class="container">
       <!-- deposit history -->
       <div class="table">
         <div class="table-header">
@@ -118,6 +113,6 @@ axios
 </template>
 <style scoped>
 .withdrawal{
-  padding: 3.75rem 0;
+  padding: 2rem;
 }
 </style>

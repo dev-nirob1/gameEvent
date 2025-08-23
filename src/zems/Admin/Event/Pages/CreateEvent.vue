@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
-import SectionTitle from '@/components/Widgets/SectionTitle.vue'
 
 const create = ref({})
 const categories = ref()
@@ -32,8 +31,7 @@ axios
 </script>
 <template>
   <section class="create-event bg-light">
-    <div class="container px-2">
-      <SectionTitle class="text-center mb-2">Create Event</SectionTitle>
+    <div class="container">
       <div>
         <label for="">Title</label>
         <InputField type="text" v-model="create.title" placeholder="Title" />
@@ -76,7 +74,7 @@ axios
 
 <style scoped>
 .create-event {
-  padding: 3.75rem 0;
+  padding: 2rem;
 }
 
 .create-event input {
