@@ -32,7 +32,7 @@ axios
         <div class="table-header">
           <div class="sl">SL</div>
           <div>Title</div>
-          <div>Description</div>
+          <!-- <div>Description</div> -->
           <div>Image</div>
           <div>amount</div>
           <div>Winning Amount</div>
@@ -51,21 +51,21 @@ axios
             <div class="medium-none">Title</div>
             {{ data.title }}
           </div>
-          <div>
+          <!-- <div>
             <div class="medium-none">Description</div>
-            ${{ data.description }}
-          </div>
+            {{ data.description }}
+          </div> -->
           <div>
             <div class="medium-none">Image</div>
-            {{ data.image }}
+            <BaseImage :image="data.image" alt="image" />
           </div>
           <div>
             <div class="medium-none">Amount</div>
-            {{ data.amount }}
+            ${{ data.amount }}
           </div>
           <div>
             <div class="medium-none">Winning Amount</div>
-            {{ data.winning_amount }}
+            ${{ data.winning_amount }}
           </div>
           <div>
             <div class="medium-none">Start Time</div>
@@ -83,7 +83,7 @@ axios
             <div class="medium-none">Actions</div>
             <!-- {{ data.status }} -->
             <div class="flex align-center gap-1">
-              <BaseButton @click="deleted" class="bg-danger"><i class="fa-solid fa-trash"></i></BaseButton>
+              <BaseButton @click="deleted(data.id)" class="bg-danger"><i class="fa-solid fa-trash"></i></BaseButton>
               <RouterLink class="btn bg-warning" :to="`/admin/event/update/${data.id}`">
                 <i class="fa-solid fa-pen-to-square"></i>
               </RouterLink>
@@ -96,7 +96,9 @@ axios
   </section>
 </template>
 <style scoped>
-.events {
+@media(min-width: 768px){
+  .events {
   padding: 2rem;
+}
 }
 </style>

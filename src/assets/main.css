@@ -194,12 +194,18 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.table-row img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border-radius: .25rem;
+}
 .table-row .btn {
   border: none;
 }
-.table-row a{
+.table-row a {
   color: var(--primary-color);
-  padding: .5rem .75rem;
+  padding: 0.5rem 0.75rem;
 }
 @media (min-width: 576px) {
   :root {
@@ -227,7 +233,7 @@ a {
 
   /* table styles  */
   .table .sl {
-    max-width: 5rem;
+    max-width: 3rem;
   }
   .table-row {
     flex-direction: row;
