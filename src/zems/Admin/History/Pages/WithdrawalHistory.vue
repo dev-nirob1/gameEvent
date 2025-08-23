@@ -23,11 +23,12 @@ axios
 
     withdrawals.value = res.data
   })
+  
 </script>
 <template>
   <section class="withdrawal bg-light">
     <div class="container">
-      <!-- deposit history -->
+      <!-- withdraw history -->
       <div class="table">
         <div class="table-header">
           <div>ID</div>
@@ -42,6 +43,7 @@ axios
           <div>User ID</div>
           <div>Created At</div>
           <div>Time</div>
+          <div>Actions</div>
         </div>
 
         <div v-for="withdrawal in withdrawals" :key="withdrawal.id" class="table-row">
@@ -104,6 +106,17 @@ axios
             <div class="medium-none">Time</div>
             {{ withdrawal.paymentExecuteTime }}
           </div>
+
+          <div>
+            <div class="medium-none">Actions</div>
+            <!-- {{ data.status }} -->
+            <div class="flex align-center gap-1">
+              <BaseButton @click="deleted(withdrawal.id)" class="bg-danger"><i class="fa-solid fa-trash"></i></BaseButton>
+              <RouterLink class="btn bg-warning" to="/admin/withdrawal">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </RouterLink>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -112,7 +125,9 @@ axios
   </section>
 </template>
 <style scoped>
+@media (min-width: 768px) {
 .withdrawal{
   padding: 2rem;
+}
 }
 </style>
