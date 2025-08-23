@@ -13,6 +13,12 @@
       </RouterLink>
     </li>
     <li>
+      <RouterLink to="/login">
+        <i class="fa-solid fa-login"></i>
+        <span>Login</span>
+      </RouterLink>
+    </li>
+    <!-- <li>
       <RouterLink to="/withdraw-history">
         <i class="fa-solid fa-envelope"></i>
         <span>History</span>
@@ -23,7 +29,7 @@
         <i class="fa-solid fa-trophy"></i>
         <span>Event</span>
       </RouterLink>
-    </li>
+    </li> -->
   </ul>
 </template>
 

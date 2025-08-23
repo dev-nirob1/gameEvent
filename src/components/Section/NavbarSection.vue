@@ -46,11 +46,14 @@ watchEffect(() => {
           <RouterLink to="/events">Events</RouterLink>
         </ListItem>
         <ListItem>
+          <RouterLink to="/login">Login</RouterLink>
+        </ListItem>
+        <!-- <ListItem>
           <RouterLink to="/withdraw-history">History</RouterLink>
         </ListItem>
         <ListItem>
           <RouterLink to="/my-event">My Event</RouterLink>
-        </ListItem>
+        </ListItem> -->
       </ul>
     </nav>
   </header>
