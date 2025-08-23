@@ -1,6 +1,4 @@
 <script setup>
-// import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
-import SectionTitle from '@/components/Widgets/SectionTitle.vue';
 
 const deposit_history = [
   { id: 1, amount: "50", method: "Bkash", date: "10 Aug 2025", status: "Completed" },
@@ -15,9 +13,6 @@ const deposit_history = [
   <section class="deposit-history bg-light">
 
     <div class="container">
-      <SectionTitle class="text-center mb-2">
-        Deposit History
-      </SectionTitle>
       <!-- deposit history-->
       <div class="table">
         <div class="table-header">

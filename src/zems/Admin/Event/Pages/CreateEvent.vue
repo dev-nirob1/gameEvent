@@ -73,10 +73,6 @@ axios
 </template>
 
 <style scoped>
-.create-event {
-  padding: 2rem;
-}
-
 .create-event input {
   background-color: var(--white-color);
   border-radius: .5rem;
@@ -87,5 +83,10 @@ axios
   background: var(--white-color);
   border-radius: .5rem;
   border: 2px solid rgb(from var(--secondary-color) r g b / 50%);
+}
+@media (min-width: 768px){
+  .create-event {
+  padding: 2rem;
+}
 }
 </style>

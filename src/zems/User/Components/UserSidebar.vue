@@ -8,14 +8,14 @@ import { RouterLink } from "vue-router";
       <BaseImage image="/logo.png" alt="logo" />
     </RouterLink>
     <nav class="sidebar-nav">
-      <RouterLink to="/admin/events/all" class="nav-link">
-        <i class="fa-solid fa-calendar-alt "></i> All Events
+      <RouterLink to="/user/deposit" class="nav-link">
+        <i class="fa-solid fa-circle-dollar-to-slot"></i> Deposit
       </RouterLink>
-      <RouterLink to="/admin/event/create" class="nav-link">
-        <i class="fa-solid fa-plus"></i> Create Event
+      <RouterLink to="/user/deposit-history" class="nav-link">
+        <i class="fa-solid fa-clock-rotate-left"></i> Deposit History
       </RouterLink>
-      <RouterLink to="/admin/withdrawal" class="nav-link">
-        <i class="fas fa-credit-card"></i> Withdrawals
+       <RouterLink to="/user/events" class="nav-link">
+        <i class="fa-solid fa-calendar-alt "></i>Events
       </RouterLink>
     </nav>
   </aside>

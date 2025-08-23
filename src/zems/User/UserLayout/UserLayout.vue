@@ -1,31 +1,32 @@
 <script setup>
 import { RouterView } from 'vue-router';
-import AdminSidebar from '../Components/AdminSidebar.vue';
-import AdminMobileMenu from '../Components/AdminMobileMenu.vue';
+import UserMobileMenu from '../Components/UserMobileMenu.vue';
+import UserSidebar from '../Components/UserSidebar.vue';
 
 </script>
 
 <template>
-  <div class="admin-routes">
+  <div class="user-routes">
     <div>
-      <AdminMobileMenu />
-      <AdminSidebar />
+      <UserMobileMenu />
+      <UserSidebar />
     </div>
     <div class="router-view">
       <RouterView />
     </div>
   </div>
 </template>
-
 <style scoped>
 .router-view {
   padding: 1rem 0 5rem 0;
 }
+
 @media (min-width: 768px) {
   .router-view {
-  padding:0;
-}
-  .admin-routes {
+    padding: 0;
+  }
+
+  .user-routes {
     display: flex;
     gap: 1rem;
   }

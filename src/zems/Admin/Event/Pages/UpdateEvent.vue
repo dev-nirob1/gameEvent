@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
-import SectionTitle from '@/components/Widgets/SectionTitle.vue'
 
 const update = ref({})
 const categories = ref()
@@ -44,7 +43,6 @@ axios
 <template>
   <section class="update-event bg-light">
     <div class="container">
-      <SectionTitle class="text-center mb-2">Update Event</SectionTitle>
       <div>
         <label for="">Title</label>
         <InputField type="text" v-model="update.title" />
@@ -88,10 +86,6 @@ axios
 </template>
 
 <style scoped>
-.update-event {
-  padding: 3.75rem 0;
-}
-
 .update-event input {
   background-color: var(--white-color);
   border-radius: .5rem;
@@ -102,5 +96,11 @@ axios
   background: var(--white-color);
   border-radius: .5rem;
   border: 2px solid rgb(from var(--secondary-color) r g b / 50%);
+}
+@media (min-width: 768px){
+  .update-event {
+  padding: 2rem;
+}
+
 }
 </style>
