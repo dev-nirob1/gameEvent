@@ -3,6 +3,42 @@ import { ref } from 'vue'
 import axios from 'axios'
 import BaseTextArea from '@/components/Elements/BaseTextArea.vue'
 
+//------------------
+
+
+// const update = ref({})
+// const categories = ref()
+// const route = useRoute()
+// const api_url = import.meta.env.VITE_API_URL
+// const id = route.params.id
+
+// get current data
+// const getCurrentEvents = async()=> {
+//   const res = await axios.get(`${api_url}/event/${id}`)
+//   update.value == res.data
+// }
+// console.log(update.value);
+// getCurrentEvents()
+//Updae events datea
+// const handleUpdateEvent = async () => {
+//   try {
+//     const res = await axios.post(`${api_url}/event/update`, update.value, {
+//       headers: {
+//         'Content-Type': 'multipart/form-data',
+//       },
+//     })
+//     if (res.status == 200) {
+//       alert('Event Updated Successfully!')
+//     }
+//   } catch (error) {
+//     console.log('update event error', error);
+//   }
+// }
+
+
+
+
+// -------------------------
 const eventData = ref({})
 const categories = ref()
 const api_url = import.meta.env.VITE_API_URL

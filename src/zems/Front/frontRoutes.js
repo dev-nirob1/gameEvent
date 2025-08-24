@@ -3,6 +3,7 @@ import EventDetails from "@zems/Front/Pages/EventDetails.vue";
 import EventsPage from "@zems/Front/Pages/EventsPage.vue";
 import HomePage from "@zems/Front/Pages/HomePage.vue";
 import LoginPage from "../Auth/Pages/LoginPage.vue";
+import ProfilePage from "./Pages/ProfilePage.vue";
 
 
 export default [
@@ -30,6 +31,11 @@ export default [
           name: "login",
           component: LoginPage
         },
+        {
+          path: "/profile",
+          name: 'profile',
+          component: ProfilePage
+        }
         // {
         //   path: "/withdraw-history",
         //   name: "withdraw-history",

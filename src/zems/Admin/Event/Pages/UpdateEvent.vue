@@ -9,6 +9,7 @@ const route = useRoute()
 const api_url = import.meta.env.VITE_API_URL
 const id = route.params.id
 
+
 axios
   .get(`${api_url}/event/${id}`)
   .then((req) => req)
@@ -16,28 +17,29 @@ axios
     update.value = res.data
   })
 
-const insert = () => {
-  console.log(update.value)
-  axios
-    .post(`${api_url}/event/update`, update.value, {
+//create event
+const handleCreateEvent = async () => {
+  try {
+    const res = await axios.post(`${api_url}/event/update`, update.value, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
     })
-
-    .then((req) => req)
-    .then((res) => {
-      console.log(res.data)
-    })
-    .catch((error) => error)
+    if (res.status == 200) {
+      alert('Event Updated Successfully!')
+    }
+  } catch (error) {
+    console.log('update event error', error);
+  }
 }
 
-axios
-  .get(`${api_url}/event/create`)
-  .then((req) => req)
-  .then((res) => {
-    categories.value = res.data
-  })
+//get categories
+const getCategories = async () => {
+  const res = await axios.get(`${api_url}/event/create`);
+  categories.value = res.data
+}
+getCategories()
+
 </script>
 
 <template>
@@ -46,10 +48,6 @@ axios
       <div>
         <label for="">Title</label>
         <InputField type="text" v-model="update.title" />
-      </div>
-      <div>
-        <label for="">Description</label>
-        <InputField type="text" v-model="update.description" />
       </div>
       <div>
         <label for="">Image</label>
@@ -79,14 +77,19 @@ axios
           <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.cat_name }}</option>
         </select>
       </div>
-      <BaseButton class="bg-secondary" @click="insert">Update</BaseButton>
+      <div>
+        <label for="">Description</label>
+        <BaseTextArea v-model="update.description" />
+      </div>
+      <BaseButton class="bg-secondary" @click="handleCreateEvent">Update</BaseButton>
     </div>
   </section>
 
 </template>
 
 <style scoped>
-.update-event input {
+.update-event input,
+.update-event textarea {
   background-color: var(--white-color);
   border-radius: .5rem;
   border-color: rgb(from var(--secondary-color) r g b / 50%);
@@ -97,10 +100,11 @@ axios
   border-radius: .5rem;
   border: 2px solid rgb(from var(--secondary-color) r g b / 50%);
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
   .update-event {
-  padding: 2rem;
-}
+    padding: 2rem;
+  }
 
 }
 </style>
