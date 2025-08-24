@@ -3,42 +3,6 @@ import { ref } from 'vue'
 import axios from 'axios'
 import BaseTextArea from '@/components/Elements/BaseTextArea.vue'
 
-//------------------
-
-
-// const update = ref({})
-// const categories = ref()
-// const route = useRoute()
-// const api_url = import.meta.env.VITE_API_URL
-// const id = route.params.id
-
-// get current data
-// const getCurrentEvents = async()=> {
-//   const res = await axios.get(`${api_url}/event/${id}`)
-//   update.value == res.data
-// }
-// console.log(update.value);
-// getCurrentEvents()
-//Updae events datea
-// const handleUpdateEvent = async () => {
-//   try {
-//     const res = await axios.post(`${api_url}/event/update`, update.value, {
-//       headers: {
-//         'Content-Type': 'multipart/form-data',
-//       },
-//     })
-//     if (res.status == 200) {
-//       alert('Event Updated Successfully!')
-//     }
-//   } catch (error) {
-//     console.log('update event error', error);
-//   }
-// }
-
-
-
-
-// -------------------------
 const eventData = ref({})
 const categories = ref()
 const api_url = import.meta.env.VITE_API_URL
@@ -62,7 +26,7 @@ const handleCreateEvent = async () => {
 }
 
 //get categories
-const getCategories = async()=> {
+const getCategories = async () => {
   const res = await axios.get(`${api_url}/event/create`);
   categories.value = res.data
 }
@@ -73,42 +37,33 @@ getCategories()
 <template>
   <section class="create-event bg-light">
     <div class="container">
-      <div>
-        <label for="">Title</label>
+      <label>Title
         <InputField type="text" v-model="eventData.title" placeholder="Title" />
-      </div>
-      <div>
-        <label for="">Image</label>
+      </label>
+      <label>Image
         <InputField type="text" v-model="eventData.image" placeholder="Image" />
-      </div>
-      <div>
-        <label for="">Amount</label>
+      </label>
+      <label>Amount
         <InputField type="text" v-model="eventData.amount" placeholder="Amount" />
-      </div>
-      <div>
-        <label for="">Amount</label>
+      </label>
+      <label>Winning Amount
         <InputField type="text" v-model="eventData.winning_amount" placeholder="Amount" />
-      </div>
+      </label>
 
-      <div>
-        <label for="">Started Time</label>
+      <label>Started Time
         <InputField type="date" v-model="eventData.started_time" />
-      </div>
-
-      <div>
-        <label for="">Category</label>
+      </label>
+      <label>Category
         <!-- {{ categories }} -->
         <select v-model="eventData.cat_id">
           <option value="" disabled>-- Select a category --</option>
           <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.cat_name }}</option>
         </select>
-      </div>
+      </label>
 
-      <div>
-        <label for="">Description</label>
+      <label>Description
         <BaseTextArea v-model="eventData.description" placeholder="Description" />
-      </div>
-
+      </label>
       <BaseButton class="bg-secondary" @click="handleCreateEvent">Submit</BaseButton>
     </div>
   </section>

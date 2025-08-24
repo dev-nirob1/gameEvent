@@ -1,6 +1,8 @@
 <template>
   <section class="profile container">
-    <div class="cover bg-light"></div>
+    <div class="cover bg-light">
+      <BaseImage image="https://cdn.pixabay.com/photo/2016/10/16/18/30/not-ludo-1745964_960_720.jpg" alt="image" />
+    </div>
     <div class="profile-info">
       <div class="profile-image">
         <img :src="user.avatarUrl" alt="Avatar" class="profile__avatar" />
@@ -37,22 +39,34 @@ const user = ref({
 
 .cover {
   height: 200px;
+  width: 100%;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-info {
   position: absolute;
   left: 2rem;
-  bottom: -60px;
+  bottom: -70px;
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 1rem;
+}
+
+.profile-info p {
+  margin: .25rem 0;
 }
 
 .profile-image {
   height: 120px;
   width: 120px;
 }
-.profile-image img{
+
+.profile-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
