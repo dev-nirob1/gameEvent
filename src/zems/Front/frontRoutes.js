@@ -3,8 +3,7 @@ import EventDetails from "@zems/Front/Pages/EventDetails.vue";
 import EventsPage from "@zems/Front/Pages/EventsPage.vue";
 import HomePage from "@zems/Front/Pages/HomePage.vue";
 import LoginPage from "../Auth/Pages/LoginPage.vue";
-// import MyEventPage from "@zems/Front/Pages/MyEventPage.vue";
-// import WithdrawHistory from "@zems/Front/Pages/WithdrawHistory.vue";
+
 
 export default [
   {

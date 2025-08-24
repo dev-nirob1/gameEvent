@@ -1,7 +1,4 @@
 <script setup>
-import BreadCrumb from '@/components/Widgets/BreadCrumb.vue';
-import SectionTitle from '@/components/Widgets/SectionTitle.vue';
-
 const myEvent = [
   { id: 1, name: "Ludo Battle Royale", date: "25 Aug 2025", time: "6:00 PM", mode: "Online", type: "Solo", status: "Registered", entryFee: "5" },
   { id: 1, name: "Ludo Battle Royale", date: "25 Aug 2025", time: "6:00 PM", mode: "Online", type: "Solo", status: "Registered", entryFee: "5" },
@@ -9,13 +6,9 @@ const myEvent = [
 </script>
 
 <template>
-  <BreadCrumb />
   <section class="events-joined bg-light">
 
     <div class="container">
-      <SectionTitle class="text-center mb-2">
-        My Events
-      </SectionTitle>
       <!-- my events  -->
       <div class="table">
         <div class="table-header">
@@ -59,13 +52,10 @@ const myEvent = [
   </section>
 </template>
 <style scoped>
-.events-joined {
-  padding: 4.5rem 0 3.75rem 0;
-}
 
 @media (min-width: 768px) {
   .events-joined {
-    padding: 3rem 0 3.75rem 0;
+    padding: 2rem;
   }
 }
 </style>

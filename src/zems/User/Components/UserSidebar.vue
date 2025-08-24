@@ -14,8 +14,8 @@ import { RouterLink } from "vue-router";
       <RouterLink to="/user/deposit-history" class="nav-link">
         <i class="fa-solid fa-clock-rotate-left"></i> Deposit History
       </RouterLink>
-       <RouterLink to="/user/events" class="nav-link">
-        <i class="fa-solid fa-calendar-alt "></i>Events
+       <RouterLink to="/user/my-events" class="nav-link">
+        <i class="fa-solid fa-calendar-alt "></i>My Events
       </RouterLink>
     </nav>
   </aside>

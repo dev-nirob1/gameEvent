@@ -7,12 +7,12 @@
     </li>
     <li>
       <RouterLink to="/user/deposit-history" class="nav-link">
-        <i class="fa-solid fa-clock-rotate-left"></i> Deposit History
+        <i class="fa-solid fa-clock-rotate-left"></i>History
       </RouterLink>
     </li>
     <li>
-      <RouterLink to="/user/events" class="nav-link">
-        <i class="fa-solid fa-calendar-alt "></i>Events
+      <RouterLink to="/user/my-events" class="nav-link">
+        <i class="fa-solid fa-calendar-alt "></i>My Events
       </RouterLink>
     </li>
   </ul>
