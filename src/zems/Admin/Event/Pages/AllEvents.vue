@@ -69,9 +69,10 @@ axios
           </div>
           <div>
             <div class="medium-none">Start Time</div>
-            {{ data.started_time }}
+            {{ new Date (data.started_time).toLocaleString() }}
           </div>
           <div>
+
             <div class="medium-none">Category</div>
             {{ data.cat_id }}
           </div>
