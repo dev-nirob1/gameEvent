@@ -45,43 +45,44 @@ getCategories()
 <template>
   <section class="update-event bg-light">
     <div class="container">
-      <div>
-        <label for="">Title</label>
+      <label>Title
         <InputField type="text" v-model="update.title" />
-      </div>
-      <div>
-        <label for="">Image</label>
+      </label>
+
+      <label>Image
         <InputField type="text" v-model="update.image" />
-      </div>
-      <div>
-        <label for="">Amount</label>
+      </label>
+
+      <label>Amount
         <InputField type="number" v-model="update.amount" />
-      </div>
-      <div>
-        <label for="">Winning Amount</label>
+      </label>
+
+      <label>Winning Amount
         <InputField type="number" v-model="update.winning_amount" />
-      </div>
-      <div>
-        <label for="">Started Time</label>
+      </label>
+
+      <label>Started Time
         <InputField type="date" v-model="update.started_time" />
-      </div>
-      <div>
-        <label for="">Status</label>
+      </label>
+
+      <label>Status
         <InputField type="number" v-model="update.status" />
-      </div>
-      <div>
-        <label for="">Category</label>
+      </label>
+
+      <label>Category
         <!-- {{ categories }} -->
         <select v-model="update.cat_id">
           <option value="" disabled>-- Select a category --</option>
           <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.cat_name }}</option>
         </select>
-      </div>
-      <div>
-        <label for="">Description</label>
+      </label>
+
+      <label>Description
         <BaseTextArea v-model="update.description" />
-      </div>
-      <BaseButton class="bg-secondary" @click="handleCreateEvent">Update</BaseButton>
+      </label>
+      <BaseButton class="bg-secondary" @click="handleCreateEvent">
+        Update
+      </BaseButton>
     </div>
   </section>
 
