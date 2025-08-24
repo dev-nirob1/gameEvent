@@ -21,7 +21,7 @@ const handleCreateEvent = async () => {
     // console.log(res)
   } catch (error) {
     console.log(error);
-    alert('❌ Failed to create event. Please try again.');
+    alert('Please try again.');
   }
 }
 
@@ -31,12 +31,7 @@ const getCategories = async()=> {
   categories.value = res.data
 }
 getCategories()
-// axios
-//   .get(`${api_url}/event/create`)
-//   .then((req) => req)
-//   .then((res) => {
-//     categories.value = res.data
-//   })
+
 
 </script>
 <template>

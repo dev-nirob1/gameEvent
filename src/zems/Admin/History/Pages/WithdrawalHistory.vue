@@ -3,26 +3,13 @@ import axios from 'axios'
 import { ref } from 'vue'
 
 const withdrawals = ref()
-// const deleted = (id) => {
-//   console.log(id)
-//   axios
-//     .get(`${api_url}/event/${id}/delete`)
-//     .then((req) => req)
-//     .then((res) => {
-//       console.log(res.data)
-//     })
-// }
-
 const api_url = import.meta.env.VITE_API_URL
 
-axios
-  .get(`${api_url}/withdrawal_request`)
-  .then((req) => req)
-  .then((res) => {
-    console.log(res.data)
-
-    withdrawals.value = res.data
-  })
+const getWithdrawalRequest = async () => {
+  const res = await axios.get(`${api_url}/withdrawal_request`);
+  withdrawals.value = res.data
+}
+getWithdrawalRequest()
 
 </script>
 <template>
@@ -31,27 +18,16 @@ axios
       <!-- withdraw history -->
       <div class="table">
         <div class="table-header">
-          <div class="sl">ID</div>
           <div>Amount</div>
           <div>Payer Account</div>
           <div>Payment Method</div>
-          <!-- <div>trxID</div> -->
-          <!-- <div>Payment ID</div> -->
+          <div>trxID</div>
           <div>Status</div>
           <div>Type</div>
-          <div>Company ID</div>
-          <div>User ID</div>
-          <div>Created At</div>
-          <div>Time</div>
           <div>Actions</div>
         </div>
 
         <div v-for="withdrawal in withdrawals" :key="withdrawal.id" class="table-row">
-          <div class="sl">
-            <div class="medium-none">Id</div>
-            {{ withdrawal.id }}
-          </div>
-
           <div>
             <div class="medium-none">Amount</div>
             ${{ withdrawal.amount }}
@@ -63,19 +39,14 @@ axios
           </div>
 
           <div>
-            <div class="medium-none">Method</div>
+            <div class="medium-none">Payment Method</div>
             {{ withdrawal.payment_method }}
           </div>
 
-          <!-- <div>
+          <div>
             <div class="medium-none">trxID</div>
             {{ withdrawal.trxID }}
-          </div> -->
-
-          <!-- <div>
-            <div class="medium-none">Payment ID</div>
-            {{ withdrawal.paymentID }}
-          </div> -->
+          </div>
 
           <div>
             <div class="medium-none">Status</div>
@@ -88,30 +59,11 @@ axios
           </div>
 
           <div>
-            <div class="medium-none">Company ID</div>
-            {{ withdrawal.company_id }}
-          </div>
-
-          <div>
-            <div class="medium-none">User ID</div>
-            {{ withdrawal.user_id }}
-          </div>
-
-          <div>
-            <div class="medium-none">Created At</div>
-            {{ withdrawal.created_at }}
-          </div>
-
-          <div>
-            <div class="medium-none">Time</div>
-            {{ withdrawal.paymentExecuteTime }}
-          </div>
-
-          <div>
             <div class="medium-none">Actions</div>
             <!-- {{ data.status }} -->
             <div class="flex align-center gap-1">
-              <BaseButton @click="deleted(withdrawal.id)" class="bg-danger"><i class="fa-solid fa-trash"></i></BaseButton>
+              <BaseButton @click="deleted(withdrawal.id)" class="bg-danger"><i class="fa-solid fa-trash"></i>
+              </BaseButton>
               <RouterLink class="btn bg-warning" to="/admin/withdrawal">
                 <i class="fa-solid fa-pen-to-square"></i>
               </RouterLink>
@@ -126,8 +78,8 @@ axios
 </template>
 <style scoped>
 @media (min-width: 768px) {
-.withdrawal{
-  padding: 2rem;
-}
+  .withdrawal {
+    padding: 2rem;
+  }
 }
 </style>
